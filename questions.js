@@ -1703,7 +1703,7 @@ const fpQuestions = [
         },
         difficulty: "★★★"
     }
-],
+];
     // リスク管理分野 50問データベース（ID: 311〜360）
 const riskQuestions50 = [
     {
