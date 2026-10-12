@@ -159,18 +159,14 @@
                         </div>
                     </div>
 
-                    <!-- 【収益化PR枠：解説直下のゴールデンポジションにA8バナー広告を埋め込み】 -->
+                    <!-- 【収益化PR枠：解説直下のゴールデンポジション（JSからランダム広告が自動挿入されます）】 -->
                     <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded uppercase tracking-wider">PR / おすすめ教材</span>
                             <span class="text-xs text-amber-700 font-medium">この分野の理解をさらに深めるなら</span>
                         </div>
-                        <div class="bg-white p-3.5 rounded-xl border border-amber-100 shadow-sm text-center">
-                            <!-- A8バナー広告 1 -->
-                            <a href="https://px.a8.net/svt/ejp?a8mat=4BEET1+AO0LYQ+1WP2+1HNSR5" rel="nofollow" target="_blank">
-                                <img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=261012853645&wid=001&eno=01&mid=s00000008903009013000&mc=1">
-                            </a>
-                            <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BEET1+AO0LYQ+1WP2+1HNSR5" alt="">
+                        <div id="random-ad-box-1" class="bg-white p-3.5 rounded-xl border border-amber-100 shadow-sm text-center">
+                            <!-- ads.js から自動挿入 -->
                         </div>
                     </div>
 
@@ -191,13 +187,12 @@
                 <h2 class="text-2xl font-black text-slate-800">演習終了！お疲れ様でした</h2>
                 <p class="text-lg font-bold text-brand-700">正解数: <span id="result-score">0</span> / <span id="result-total">10</span>問</p>
                 
-                <!-- リザルト画面のPR枠（テキスト広告を埋め込み） -->
+                <!-- リザルト画面のPR枠（JSからランダム広告が自動挿入されます） -->
                 <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-5 border border-amber-200 text-left space-y-2">
                     <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded">PR</span>
                     <h4 class="text-sm font-bold text-slate-800">独学に限界を感じたら？お得な特典をチェック</h4>
-                    <div class="text-xs text-brand-700 font-bold mt-1">
-                        <a href="https://px.a8.net/svt/ejp?a8mat=4BEET1+AO0LYQ+1WP2+1HMIGI" rel="nofollow" target="_blank" class="hover:underline">【PR】ウルトラ投資アプリ【TOSSY】お得な特典が盛りだくさん！</a>
-                        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4BEET1+AO0LYQ+1WP2+1HMIGI" alt="">
+                    <div id="random-ad-box-2" class="text-xs text-brand-700 font-bold mt-1">
+                        <!-- ads.js から自動挿入 -->
                     </div>
                 </div>
 
@@ -209,7 +204,7 @@
 
     </main>
 
-    <!-- 回答終了時（リザルト画面）に自動表示されるポップアップ広告モーダル（楽天リンク広告を埋め込み） -->
+    <!-- 回答終了時（リザルト画面）に自動表示されるポップアップ広告モーダル -->
     <div id="ad-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden fade-in">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-4 relative">
             <button onclick="closeAdModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
@@ -223,11 +218,10 @@
             </div>
 
             <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 space-y-3 text-center">
-                <!-- 楽天リンク広告 -->
-                <a href="https://rpx.a8.net/svt/ejp?a8mat=4BEET1+AMTQR6+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26101269667_4BEET1_AMTQR6_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank">
-                    <img src="http://hbb.afl.rakuten.co.jp/hsb/0ec09ba3.bc2429d5.0eb4bbaa.95151395/" border="0">
-                </a>
-                <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BEET1+AMTQR6+2HOM+656YP" alt="">
+                <!-- モーダル内の広告枠（JSからランダム挿入） -->
+                <div id="random-ad-box-modal">
+                    <!-- ads.js から自動挿入 -->
+                </div>
             </div>
 
             <button onclick="closeAdModal()" class="w-full text-xs text-slate-400 hover:text-slate-600 font-medium py-1">
@@ -240,7 +234,8 @@
         <p>&copy; 2026 FP3級勉強サイト - SEO & Permalink Optimized Learning Platform.</p>
     </footer>
 
-    <!-- 外部問題データ（questions.js）の読み込み -->
+    <!-- 外部データ（広告管理: ads.js と 問題データ: questions.js）の読み込み -->
+    <script src="ads.js"></script>
     <script src="questions.js"></script>
 
     <!-- アプリケーションの動作ロジック -->
@@ -264,7 +259,23 @@
             checkSavedProgress();
 
             document.addEventListener('keydown', handleKeyboard);
+
+            // ページ読み込み時に各広告枠へランダムな広告を自動配置
+            insertRandomAds();
         };
+
+        // 各広告枠に ads.js からランダムに広告を流し込む関数
+        function insertRandomAds() {
+            if (typeof getRandomAd === 'function') {
+                const box1 = document.getElementById('random-ad-box-1');
+                const box2 = document.getElementById('random-ad-box-2');
+                const boxModal = document.getElementById('random-ad-box-modal');
+
+                if (box1) box1.innerHTML = getRandomAd();
+                if (box2) box2.innerHTML = getRandomAd();
+                if (boxModal) boxModal.innerHTML = getRandomAd();
+            }
+        }
 
         function loadReviewList() {
             const saved = localStorage.getItem('fp3_study_review');
@@ -374,3 +385,123 @@
             }
             localStorage.setItem('fp3_study_review', JSON.stringify(reviewList));
             updateReviewUI();
+
+            const buttons = document.querySelectorAll('.ans-btn');
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.answer) {
+                    btn.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-800');
+                } else if (idx === choice && !isCorrect) {
+                    btn.classList.add('bg-rose-100', 'border-rose-500', 'text-rose-800');
+                } else {
+                    btn.classList.add('opacity-40');
+                }
+            });
+
+            const expBox = document.getElementById('explanation-box');
+            expBox.classList.remove('hidden');
+
+            const badge = document.getElementById('result-badge');
+            badge.className = isCorrect ? "p-4 rounded-xl text-sm font-bold bg-emerald-100 text-emerald-800" : "p-4 rounded-xl text-sm font-bold bg-rose-100 text-rose-800";
+            badge.innerHTML = isCorrect ? '🎉 正解です！素晴らしい！' : '❌ 不正解です（復習リストに追加されました）';
+
+            document.getElementById('exp-reason').innerText = q.explanation.reason;
+            document.getElementById('exp-trap').innerText = q.explanation.trap;
+            document.getElementById('exp-law').innerText = q.explanation.law;
+
+            saveProgress();
+            expBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function nextQuestion() {
+            if (currentIndex + 1 < activeQuestions.length) {
+                currentIndex++;
+                renderQuestion();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                saveProgress();
+            } else {
+                localStorage.removeItem('fp3_study_active');
+                document.getElementById('result-score').innerText = scoreCount;
+                document.getElementById('result-total').innerText = activeQuestions.length;
+                switchScreen('result');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                // リザルト表示やポップアップ表示時に広告を再ランダム化して表示
+                insertRandomAds();
+
+                setTimeout(() => {
+                    document.getElementById('ad-modal').classList.remove('hidden');
+                }, 400);
+            }
+        }
+
+        function closeAdModal() {
+            document.getElementById('ad-modal').classList.add('hidden');
+        }
+
+        function handleKeyboard(e) {
+            const quizScreen = document.getElementById('screen-quiz');
+            if (quizScreen.classList.contains('hidden')) return;
+
+            const expHidden = document.getElementById('explanation-box').classList.contains('hidden');
+            if (!expHidden && e.key === 'Enter') {
+                nextQuestion();
+            }
+        }
+
+        function switchScreen(name) {
+            document.getElementById('screen-home').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById(`screen-${name}`).classList.remove('hidden');
+        }
+
+        function returnHome() {
+            closeAdModal();
+            switchScreen('home');
+            updateReviewUI();
+            checkSavedProgress();
+            window.location.hash = '';
+            insertRandomAds(); // ホームに戻った時も広告をランダム再抽選
+        }
+
+        function saveProgress() {
+            const data = { activeQuestions, currentIndex, scoreCount };
+            localStorage.setItem('fp3_study_active', JSON.stringify(data));
+        }
+
+        function checkSavedProgress() {
+            const saved = localStorage.getItem('fp3_study_active');
+            const container = document.getElementById('resume-container');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    if (data.activeQuestions && data.currentIndex < data.activeQuestions.length) {
+                        container.classList.remove('hidden');
+                        document.getElementById('resume-info-text').innerText = `進捗: 第 ${data.currentIndex + 1} 問目 / 全 ${data.activeQuestions.length} 問中`;
+                        return;
+                    }
+                } catch (e) {}
+            }
+            container.classList.add('hidden');
+        }
+
+        function resumeQuiz() {
+            const saved = localStorage.getItem('fp3_study_active');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    activeQuestions = data.activeQuestions;
+                    currentIndex = data.currentIndex;
+                    scoreCount = data.scoreCount;
+                    switchScreen('quiz');
+                    renderQuestion();
+                } catch (e) {
+                    alert('復元に失敗しました。');
+                    localStorage.removeItem('fp3_study_active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
