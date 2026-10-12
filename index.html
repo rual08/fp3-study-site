@@ -63,7 +63,7 @@
         <!-- 1. ホーム画面 -->
         <div id="screen-home" class="space-y-6 fade-in">
             <div class="bg-gradient-to-br from-brand-700 to-brand-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-3">
-                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全6分野網羅</span>
+                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全6分野網羅・外部データ連動</span>
                 <h2 class="text-2xl sm:text-3xl font-black leading-tight">FP3級学習プラットフォーム。</h2>
                 <p class="text-emerald-100 text-sm opacity-90 max-w-xl">
                     全6分野の豊富な過去問・類題を収録。「正解の理由」「ひっかけの罠」「関連法令」の3本柱の徹底解説で一発合格をサポートします。
@@ -210,10 +210,9 @@
 
     </main>
 
-    <!-- 【NEW】回答終了時（リザルト画面）に自動表示されるポップアップ広告モーダル -->
+    <!-- 回答終了時（リザルト画面）に自動表示されるポップアップ広告モーダル -->
     <div id="ad-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden fade-in">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-4 relative">
-            <!-- 閉じるボタン -->
             <button onclick="closeAdModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -249,66 +248,11 @@
         <p>&copy; 2026 FP3級勉強サイト - SEO & Permalink Optimized Learning Platform.</p>
     </footer>
 
-    <!-- JavaScript ロジック ＆ 250問データベース -->
+    <!-- 外部問題データ（questions.js）の読み込み -->
+    <script src="questions.js"></script>
+
+    <!-- アプリケーションの動作ロジック -->
     <script>
-        // --- 250問規模の本格データベース生成ロジック ＆ コアデータ ---
-        const baseQuestions = [
-            // ライフプランニング (life)
-            { id: 1, category: "life", categoryName: "ライフプランニング", type: "ox", q: "公的年金の老齢基礎年金は、保険料納付済期間と保険料免除期間などを合算した期間が原則として10年以上ある場合に受給することができる。", options: null, ans: 0, reason: "2017年8月からの法改正により、受給資格期間は従来の25年から10年に短縮されました。", trap: "過去問では「25年以上であること」という旧基準のひっかけ頻出です。", law: "国民年金法第26条。", diff: "★☆☆" },
-            { id: 2, category: "life", categoryName: "ライフプランニング", type: "3choice", q: "雇用保険の基本手当を受給する際、一般離職者の場合の原則的な受給要件として、離職日前2年間に被保険者期間が通算して何ヶ月以上必要か？", options: ["6ヶ月以上", "12ヶ月以上", "24ヶ月以上"], ans: 1, reason: "一般離職者の原則は12ヶ月以上です。", trap: "倒産や解雇などの特定受給資格者は6ヶ月以上に緩和されます。", law: "雇用保険法第13条。", diff: "★★☆" },
-            { id: 3, category: "life", categoryName: "ライフプランニング", type: "ox", q: "フラット35の借入金利は全国一律であり、どの取扱金融機関であっても全く同一の金利が適用される。", options: null, ans: 1, reason: "金融機関ごとに異なる金利を設定しています。", trap: "「住宅金融支援機構が定めるから全国一律」という誤認に注意です。", law: "住宅金融支援機構法。", diff: "★★☆" },
-            { id: 4, category: "life", categoryName: "ライフプランニング", type: "3choice", q: "公的年金の「振替加算」を受けるための要件として、老齢基礎年金の受給権者が何歳未満である配偶者によって生計を維持されているか？", options: ["60歳未満", "65歳未満", "70歳未満"], ans: 1, reason: "65歳未満の配偶者に支給されます。", trap: "60歳と勘違いしやすいので要注意です。", law: "国民年金法。", diff: "★★★" },
-
-            // リスク管理 (risk)
-            { id: 5, category: "risk", categoryName: "リスク管理", type: "ox", q: "生命保険契約で、契約者＝夫、被保険者＝妻、受取人＝夫とした場合、受取った死亡保険金には所得税（一時所得）が課税される。", options: null, ans: 0, reason: "負担者と受取人が同一なので所得税の課税対象です。", trap: "贈与税や相続税と混同させるひっかけに注意。", law: "所得税法第34条。", diff: "★★☆" },
-            { id: 6, category: "risk", categoryName: "リスク管理", type: "3choice", q: "通常の火災保険で補償対象外となるものはどれか？", options: ["風災による屋根の破損", "地震を原因とする火災", "雪災によるカーポートの倒壊"], ans: 1, reason: "地震を原因とする火災は地震保険が必要です。", trap: "火災だから火災保険で全額出ると思い込ませる罠です。", law: "地震保険に関する法律。", diff: "★★★" },
-
-            // 金融資産運用 (financial)
-            { id: 7, category: "financial", categoryName: "金融資産運用", type: "ox", q: "株式の投資指標であるPERは「株価÷1株当たり当期純利益」で算出され、低いほど割安とされる。", options: null, ans: 0, reason: "PERの基本計算式と評価基準です。", trap: "PBRと混同させないようにしましょう。", law: "会社法・金融商品取引法。", diff: "★☆☆" },
-            { id: 8, category: "financial", categoryName: "金融資産運用", type: "3choice", q: "新NISAのつみたて投資枠の説明として適切なものはどれか？", options: ["売却した分の非課税投資枠は翌年以降に復活し再利用できる。", "年間投資枠の限度額は360万円である。", "非課税保有期間は最長5年である。"], ans: 0, reason: "売却分の簿価枠が翌年復活する仕組みになりました。", trap: "旧NISAのルールと混同させる定番問題です。", law: "租税特別措置法。", diff: "★★☆" },
-
-            // タックスプランニング (tax)
-            { id: 9, category: "tax", categoryName: "タックスプランニング", type: "ox", q: "所得税の医療費控除は、支払った医療費が10万円（総所得金額等200万円未満は5％）を超えた場合に適用される。", options: null, ans: 0, reason: "医療費控除の基本計算ルールです。", trap: "足切り額の計算基準（総所得金額等）を誤認させるひっかけに注意。", law: "所得税法第73条。", diff: "★☆☆" },
-            { id: 10, category: "tax", categoryName: "タックスプランニング", type: "3choice", q: "給与所得者の配偶者控除を受けるための配偶者の合計所得金額の上限はいくらか？", options: ["38万円以下", "48万円以下", "58万円以下"], ans: 1, reason: "所得控除改正により48万円以下（給与収入103万円以下）となっています。", trap: "旧基準の38万円を選ぶように誘導するひっかけ問題。", law: "所得税法第83条。", diff: "★★☆" },
-
-            // 不動産 (realestate)
-            { id: 11, category: "realestate", categoryName: "不動産", type: "ox", q: "建築基準法において、都市計画区域等内の敷地は、幅員4メートル以上の道路に2メートル以上接しなければならない。", options: null, ans: 0, reason: "接道義務に関する基本規定です。", trap: "「3メートル以上」などの数値の書き換えに注意。", law: "建築基準法第43条。", diff: "★☆☆" },
-            { id: 12, category: "realestate", categoryName: "不動産", type: "3choice", q: "不動産の譲渡所得において、実際の取得費が不明な場合に用いられる概算取得費はいくらか？", options: ["譲渡価額の3％", "譲渡価額の5％", "譲渡価額の10％"], ans: 1, reason: "概算取得費は譲渡価額の5％相当額です。", trap: "「10％」や「房地産評価額の〜」といった偽の選択肢に注意。", law: "所得税法第33条。", diff: "★★☆" },
-
-            // 相続・事業承継 (inheritance)
-            { id: 13, category: "inheritance", categoryName: "相続・事業承継", type: "ox", q: "相続税の基礎控除額は「3,000万円 ＋ 600万円 × 法定相続人の数」の算式により計算される。", options: null, ans: 0, reason: "相続税の申告要否を判定する最重要の基礎控除算式です。", trap: "「4,000万円＋800万円」などの数字の改ざんに注意。", law: "相続税法第15条。", diff: "★☆☆" },
-            { id: 14, category: "inheritance", categoryName: "相続・事業承継", type: "3choice", q: "自筆証書遺言に関する記述のうち、適切なものはどれか？", options: ["本文のほか、財産目録についても必ず全て手書きしなければならない。", "財産目録については、パソコン作成や通帳のコピー等の添付が認められている。", "自筆証書遺言は公証役場で作成してもらう必要がある。"], ans: 1, reason: "法改正により財産目録のパソコン作成・コピー添付が認められました。", trap: "「すべて手書きでなければならない」という古いルールを信じ込ませる罠。", law: "民法第968条。", diff: "★★☆" }
-        ];
-
-        let fpQuestions = [];
-        function generateFullDatabase() {
-            let idCounter = 1;
-            const categories = ['life', 'risk', 'financial', 'tax', 'realestate', 'inheritance'];
-            categories.forEach(cat => {
-                const filtered = baseQuestions.filter(q => q.category === cat);
-                if (filtered.length === 0) return;
-                
-                for (let i = 0; i < 40; i++) {
-                    const template = filtered[i % filtered.length];
-                    fpQuestions.push({
-                        id: idCounter++,
-                        category: template.category,
-                        categoryName: template.categoryName,
-                        type: template.type,
-                        question: `【演習No.${idCounter}】 ${template.q}`,
-                        options: template.options,
-                        answer: template.ans,
-                        explanation: {
-                            reason: template.reason + ` (重要度ランク:${i % 3 + 1})`,
-                            trap: template.trap,
-                            law: template.law
-                        },
-                        difficulty: template.diff
-                    });
-                }
-            });
-        }
-
         let activeQuestions = [];
         let currentIndex = 0;
         let scoreCount = 0;
@@ -316,8 +260,13 @@
         let reviewList = [];
 
         window.onload = function() {
-            generateFullDatabase();
-            document.getElementById('header-total-pool').innerText = `${fpQuestions.length}問`;
+            // questions.js から読み込んだ fpQuestions の実際の総数をヘッダーに反映
+            if (typeof fpQuestions !== 'undefined') {
+                document.getElementById('header-total-pool').innerText = `${fpQuestions.length}問`;
+            } else {
+                document.getElementById('header-total-pool').innerText = `0問 (要確認)`;
+            }
+
             loadReviewList();
             updateReviewUI();
             checkSavedProgress();
@@ -343,6 +292,11 @@
         }
 
         function startQuiz(mode = 'all') {
+            if (typeof fpQuestions === 'undefined' || fpQuestions.length === 0) {
+                alert('問題データ（questions.js）が正しく読み込まれていません。');
+                return;
+            }
+
             let pool = [...fpQuestions];
             if (mode === 'review') {
                 pool = fpQuestions.filter(q => reviewList.includes(q.id));
@@ -354,11 +308,16 @@
                 const cat = document.getElementById('select-category').value;
                 if (cat !== 'all') {
                     pool = fpQuestions.filter(q => q.category === cat);
+                    if (pool.length === 0) {
+                        alert('選択された分野の問題がまだ登録されていません。');
+                        return;
+                    }
                 }
             }
 
             pool.sort(() => Math.random() - 0.5);
-            activeQuestions = pool.slice(0, 10);
+            // 総合演習時は最大10問、プールが10問未満なら全問
+            activeQuestions = pool.slice(0, Math.min(10, pool.length));
             currentIndex = 0;
             scoreCount = 0;
             hasAnswered = false;
@@ -374,8 +333,8 @@
 
             window.location.hash = `question-${q.id}`;
             document.getElementById('permalink-label').innerText = `問 ${currentIndex + 1} / ${activeQuestions.length} （個別URL: /questions/${q.id}）`;
-            document.getElementById('quiz-category-badge').innerText = q.categoryName;
-            document.getElementById('quiz-diff-badge').innerText = `難易度: ${q.difficulty}`;
+            document.getElementById('quiz-category-badge').innerText = q.categoryName || "FP3級分野";
+            document.getElementById('quiz-diff-badge').innerText = `難易度: ${q.difficulty || '★★☆'}`;
             document.getElementById('question-text').innerText = q.question;
 
             const container = document.getElementById('options-container');
@@ -465,7 +424,6 @@
                 switchScreen('result');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                // 【追加機能】全問終了時にポップアップ広告モーダルを表示
                 setTimeout(() => {
                     document.getElementById('ad-modal').classList.remove('hidden');
                 }, 400);
