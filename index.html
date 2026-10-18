@@ -63,10 +63,10 @@
         <!-- 1. ホーム画面 -->
         <div id="screen-home" class="space-y-6 fade-in">
             <div class="bg-gradient-to-br from-brand-700 to-brand-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-3">
-                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全分野網羅・完全自己完結型</span>
+                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全分野網羅・外部データ連動</span>
                 <h2 class="text-2xl sm:text-3xl font-black leading-tight">FP3級学習プラットフォーム。</h2>
                 <p class="text-emerald-100 text-sm opacity-90 max-w-xl">
-                    豊富な過去問・類題を収録。「正解の理由」「ひっかけの罠」「関連法令」の3本柱の徹底解説で一発合格をサポートします。
+                    外部ファイル化された豊富な過去問・類題を収録。「正解の理由」「ひっかけの罠」「関連法令」の3本柱の徹底解説で一発合格をサポートします。
                 </p>
             </div>
 
@@ -175,14 +175,14 @@
                         </div>
                     </div>
 
-                    <!-- 収益化PR枠 -->
+                    <!-- 収益化PR枠（ads.jsから自動挿入） -->
                     <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded uppercase tracking-wider">PR / おすすめ</span>
                             <span class="text-xs text-amber-700 font-medium">この分野の理解をさらに深めるなら</span>
                         </div>
                         <div id="random-ad-box-1" class="bg-white p-3.5 rounded-xl border border-amber-100 shadow-sm text-center">
-                            おすすめのFP3級参考書・問題集をチェック！
+                            <!-- ads.js から自動挿入 -->
                         </div>
                     </div>
 
@@ -207,7 +207,7 @@
                     <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded">PR</span>
                     <h4 class="text-sm font-bold text-slate-800">お得な特典をチェック</h4>
                     <div id="random-ad-box-2" class="text-xs text-brand-700 font-bold mt-1">
-                        FP3級オンライン講座をチェック！
+                        <!-- ads.js から自動挿入 -->
                     </div>
                 </div>
 
@@ -233,8 +233,8 @@
             </div>
 
             <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 space-y-3 text-center">
-                <div id="random-ad-box-modal" class="text-xs font-bold text-amber-800">
-                    おすすめの金融資格対策模試をチェック！
+                <div id="random-ad-box-modal">
+                    <!-- ads.js から自動挿入 -->
                 </div>
             </div>
 
@@ -278,10 +278,6 @@
                     <h4 class="font-bold text-slate-800 text-sm">1. 個人情報の利用目的</h4>
                     <p>当サイトでは、お問い合わせの際にお名前やメールアドレス等の個人情報をご入力いただく場合がございます。</p>
                 </section>
-                <section class="space-y-1">
-                    <h4 class="font-bold text-slate-800 text-sm">2. 広告の配信について</h4>
-                    <p>当サイトでは、第三者配信の広告サービスを利用する場合があります。</p>
-                </section>
             </div>
         </div>
     </div>
@@ -296,118 +292,9 @@
         <p>&copy; 2026 FP3級勉強サイト.</p>
     </footer>
 
-    <!-- 内蔵型問題データ（外部ファイルの読込エラーを完全に防止） -->
-    <script>
-        const fpQuestions = [
-            {
-                id: 201,
-                category: "financial",
-                categoryName: "金融資産運用",
-                type: "ox",
-                question: "日本銀行が実施する買いオペレーションは、市中の金融機関から国債等を買い入れることにより、市場の資金量を減少させる金融引締め効果を持つ。",
-                options: null,
-                answer: 1,
-                explanation: {
-                    reason: "買いオペ（資金供給オペ）は、日銀が市中銀行から国債等を買い入れて代金を支払うため、市場の資金量は増加します（金融緩和方向）。",
-                    trap: "「国債を買う＝日銀がお金を回収する」と勘違いさせる典型的なひっかけです。",
-                    law: "日本銀行法および金融政策の基本メカニズム"
-                },
-                difficulty: "★★☆"
-            },
-            {
-                id: 202,
-                category: "financial",
-                categoryName: "金融資産運用",
-                type: "3choice",
-                question: "預金保険制度における「決済用預金」に関する記述として、正しいものはどれか？",
-                options: [
-                    "利息がつかないこと、および「無利息、要求払い、決済サービスを提供できること」の3要件を満たすものが全額保護される。",
-                    "他の定期預金等と同様に、1金融機関につき1人当たり元本1,000万円までが保護される。",
-                    "外貨預金や外貨建ての普通預金も決済用預金に含まれて全額保護される。"
-                ],
-                answer: 0,
-                explanation: {
-                    reason: "決済用預金（当座預金や利息のつかない普通預金等）は、「無利息・要求払い・決済サービスを提供できること」の3要件を満たせば、預金保険により全額保護されます。",
-                    trap: "一般預金の「1,000万円まで」という制限や、外貨預金が対象外であることを見落とさせる罠です。",
-                    law: "預金保険法第53条"
-                },
-                difficulty: "★★★"
-            },
-            {
-                id: 301,
-                category: "tax",
-                categoryName: "タックスプランニング",
-                type: "ox",
-                question: "所得税において、個人が退職手当等を受け取ったことによる所得は「退職所得」として他の所得と合算せず、分離課税の対象となる。",
-                options: null,
-                answer: 0,
-                explanation: {
-                    reason: "退職所得は、担税力（税金を払う能力）の配慮や長年の勤労への報償的性格から、他の所得とは合算せずに単独で計算する「申告分離課税（源泉徴収により完結可）」が適用されます。",
-                    trap: "「退職金は給与と同じように他の所得と合算して総合課税される」と勘違いさせる典型的なひっかけです。",
-                    law: "所得税法第30条および第22条（分離課税）"
-                },
-                difficulty: "★☆☆"
-            },
-            {
-                id: 302,
-                category: "tax",
-                categoryName: "タックスプランニング",
-                type: "3choice",
-                question: "所得税における「配偶者控除」の適用を受けるための配偶者の合計所得金額の要件として、正しいものはどれか？",
-                options: [
-                    "48万円以下（給与収入のみの場合は103万円以下）",
-                    "95万円以下（給与収入のみの場合は150万円以下）",
-                    "133万円以下（給与収入のみの場合は201万円以下）"
-                ],
-                answer: 0,
-                explanation: {
-                    reason: "配偶者控除の対象となる控除対象配偶者の年間合計所得金額要件は「48万円以下」（給与収入ベースで「103万円以下」）です。",
-                    trap: "配偶者特別控除の額と混同させる定番問題です。",
-                    law: "所得税法第2条"
-                },
-                difficulty: "★★☆"
-            },
-            {
-                id: 311,
-                category: "risk",
-                categoryName: "リスク管理",
-                type: "ox",
-                question: "生命保険の契約において、保険契約者と被保険者が同一人である場合、死亡保険金を受け取った者が保険料を負担していなければ、当該死亡保険金は相続税の課税対象となる。",
-                options: null,
-                answer: 1,
-                explanation: {
-                    reason: "契約者（＝被保険者）が死亡し、保険料負担者以外の人が受け取った場合、死亡保険金は「相続税」の課税対象となります。",
-                    trap: "受取人の負担関係を混同させるひっかけです。",
-                    law: "相続税法第3条"
-                },
-                difficulty: "★★☆"
-            },
-            {
-                id: 312,
-                category: "risk",
-                categoryName: "リスク管理",
-                type: "3choice",
-                question: "生命保険の死亡保険金受取人を変更する場合の法律上の要件として、最も適切なものはどれか？",
-                options: [
-                    "保険契約者の意思表示のみで行うことができ、原則として保険会社の承諾は効力発生要件ではない。",
-                    "被保険者本人の直筆の署名と、法務局への届出がなければ一切変更の効力が生じない。",
-                    "受取人変更には、旧受取人の書面による同意が必ず事前に必要である。"
-                ],
-                answer: 0,
-                explanation: {
-                    reason: "生命保険の受取人変更は、保険契約者の意思表示（通知）により効力を生じます。",
-                    trap: "旧受取人の同意や保険会社の承諾が必要であると思い込ませる罠です。",
-                    law: "保険法第43条"
-                },
-                difficulty: "★★☆"
-            }
-        ];
-
-        // 広告用ダミー関数（ads.jsがない場合のエラーを防ぐため）
-        function getRandomAd() {
-            return "FP3級一発合格を目指す方へ！おすすめ公式テキスト＆問題集をチェック";
-        }
-    </script>
+    <!-- 外部データ（ads.js と questions.js）の読み込み -->
+    <script src="ads.js"></script>
+    <script src="questions.js"></script>
 
     <!-- アプリケーションの動作ロジック -->
     <script>
@@ -421,6 +308,8 @@
             if (typeof fpQuestions !== 'undefined') {
                 const totalEl = document.getElementById('header-total-pool');
                 if (totalEl) totalEl.innerText = `${fpQuestions.length}問`;
+            } else {
+                console.warn("questions.js が正しく読み込まれていません。");
             }
 
             loadReviewList();
@@ -440,6 +329,8 @@
                 if (box1) box1.innerHTML = getRandomAd();
                 if (box2) box2.innerHTML = getRandomAd();
                 if (boxModal) boxModal.innerHTML = getRandomAd();
+            } else {
+                console.warn("ads.js の getRandomAd() が定義されていません。");
             }
         }
 
@@ -493,7 +384,7 @@
 
         function startQuiz(mode = 'all') {
             if (typeof fpQuestions === 'undefined' || fpQuestions.length === 0) {
-                alert('問題データが正しく読み込まれていません。');
+                alert('問題データ（questions.js）が正しく読み込まれていません。');
                 return;
             }
 
