@@ -112,6 +112,25 @@
                     </button>
                 </div>
             </div>
+
+            <!-- 運営者情報カード -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-4">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center space-x-2">
+                    <i class="fa-solid fa-user-gear text-brand-600"></i>
+                    <span>運営者プロフィール</span>
+                </h3>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold flex-shrink-0">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="space-y-1 text-sm">
+                        <h4 class="font-bold text-slate-800">FP資格保有 ITエンジニア</h4>
+                        <p class="text-slate-600 leading-relaxed text-xs sm:text-sm">
+                            ファイナンシャル・プランニング技能士の知見とITエンジニアとしてのWeb開発ノウハウを活かし、FP3級受験生の学習効率を最大化する無料問題演習プラットフォームを開発・運営しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 2. クイズ画面 -->
@@ -204,7 +223,7 @@
 
     </main>
 
-    <!-- 回答終了時（リザルト画面）に自動表示されるポップアップ広告モーダル -->
+    <!-- ポップアップ広告モーダル -->
     <div id="ad-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden fade-in">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-4 relative">
             <button onclick="closeAdModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
@@ -218,7 +237,6 @@
             </div>
 
             <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 space-y-3 text-center">
-                <!-- モーダル内の広告枠（JSからランダム挿入） -->
                 <div id="random-ad-box-modal">
                     <!-- ads.js から自動挿入 -->
                 </div>
@@ -230,7 +248,65 @@
         </div>
     </div>
 
-    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 mt-12">
+    <!-- お問い合わせモーダル -->
+    <div id="contact-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden fade-in">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 space-y-4 relative max-h-[90vh] flex flex-col">
+            <button onclick="closeContactModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-lg font-bold text-slate-800 flex items-center space-x-2 border-b pb-3">
+                <i class="fa-solid fa-envelope text-brand-600"></i>
+                <span>お問い合わせ</span>
+            </h3>
+            <div class="flex-grow overflow-y-auto">
+                <!-- Googleフォーム埋め込み領域（ご自身のGoogleフォームURLのiframeコードをここに貼り付けできます） -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center space-y-3">
+                    <p class="text-xs text-slate-600">ご意見・ご感想・問題の修正依頼などは下記フォームよりお問い合わせください。</p>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDdummyFormIdHere/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" class="rounded-xl border border-slate-200">読み込み中…</iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- プライバシーポリシーモーダル -->
+    <div id="privacy-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden fade-in">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 space-y-4 relative max-h-[85vh] flex flex-col">
+            <button onclick="closePrivacyModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-lg font-bold text-slate-800 flex items-center space-x-2 border-b pb-3">
+                <i class="fa-solid fa-shield-halved text-brand-600"></i>
+                <span>プライバシーポリシー</span>
+            </h3>
+            <div class="flex-grow overflow-y-auto text-xs text-slate-600 space-y-4 pr-2 leading-relaxed">
+                <section class="space-y-1">
+                    <h4 class="font-bold text-slate-800 text-sm">1. 個人情報の利用目的</h4>
+                    <p>当サイトでは、お問い合わせの際にお名前やメールアドレス等の個人情報をご入力いただく場合がございます。収集した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合にのみ利用し、これらの目的以外では利用いたしません。</p>
+                </section>
+                <section class="space-y-1">
+                    <h4 class="font-bold text-slate-800 text-sm">2. 広告の配信について（Google AdSense 等）</h4>
+                    <p>当サイトでは、第三者配信の広告サービス（Google AdSense、A8.net 等）を利用する場合があります。広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。Cookieを使用することで当サイトはお客様のコンピュータを識別できるようになりますが、お客様個人を特定できるものではありません。</p>
+                    <p>GoogleによるCookieの無効化やGoogle AdSenseに関する詳細は「<a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener" class="text-brand-600 underline">Googleポリシーと規約</a>」をご覧ください。</p>
+                </section>
+                <section class="space-y-1">
+                    <h4 class="font-bold text-slate-800 text-sm">3. 免責事項</h4>
+                    <p>当サイトのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、正確性や安全性を保証するものではありません。当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</p>
+                </section>
+                <section class="space-y-1">
+                    <h4 class="font-bold text-slate-800 text-sm">4. 著作権・肖像権</h4>
+                    <p>当サイトで掲載している文章や画像などにつきましては、無断転載を禁止します。著作権や肖像権に関して問題がございましたら、お問い合わせフォームよりご連絡ください。迅速に対応いたします。</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-12 space-y-3">
+        <div class="flex items-center justify-center space-x-4 font-medium text-slate-600">
+            <button onclick="openPrivacyModal()" class="hover:text-brand-600 transition">プライバシーポリシー</button>
+            <span>|</span>
+            <button onclick="openContactModal()" class="hover:text-brand-600 transition">お問い合わせ</button>
+        </div>
         <p>&copy; 2026 FP3級勉強サイト - SEO & Permalink Optimized Learning Platform.</p>
     </footer>
 
@@ -247,7 +323,6 @@
         let reviewList = [];
 
         window.onload = function() {
-            // questions.js から読み込んだ fpQuestions の実際の総数をヘッダーに反映
             if (typeof fpQuestions !== 'undefined') {
                 document.getElementById('header-total-pool').innerText = `${fpQuestions.length}問`;
             } else {
@@ -259,12 +334,9 @@
             checkSavedProgress();
 
             document.addEventListener('keydown', handleKeyboard);
-
-            // ページ読み込み時に各広告枠へランダムな広告を自動配置
             insertRandomAds();
         };
 
-        // 各広告枠に ads.js からランダムに広告を流し込む関数
         function insertRandomAds() {
             if (typeof getRandomAd === 'function') {
                 const box1 = document.getElementById('random-ad-box-1');
@@ -275,6 +347,22 @@
                 if (box2) box2.innerHTML = getRandomAd();
                 if (boxModal) boxModal.innerHTML = getRandomAd();
             }
+        }
+
+        function openContactModal() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+        }
+
+        function closeContactModal() {
+            document.getElementById('contact-modal').classList.add('hidden');
+        }
+
+        function openPrivacyModal() {
+            document.getElementById('privacy-modal').classList.remove('hidden');
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacy-modal').classList.add('hidden');
         }
 
         function loadReviewList() {
@@ -426,7 +514,6 @@
                 switchScreen('result');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                // リザルト表示やポップアップ表示時に広告を再ランダム化して表示
                 insertRandomAds();
 
                 setTimeout(() => {
@@ -435,73 +522,4 @@
             }
         }
 
-        function closeAdModal() {
-            document.getElementById('ad-modal').classList.add('hidden');
-        }
-
-        function handleKeyboard(e) {
-            const quizScreen = document.getElementById('screen-quiz');
-            if (quizScreen.classList.contains('hidden')) return;
-
-            const expHidden = document.getElementById('explanation-box').classList.contains('hidden');
-            if (!expHidden && e.key === 'Enter') {
-                nextQuestion();
-            }
-        }
-
-        function switchScreen(name) {
-            document.getElementById('screen-home').classList.add('hidden');
-            document.getElementById('screen-quiz').classList.add('hidden');
-            document.getElementById('screen-result').classList.add('hidden');
-            document.getElementById(`screen-${name}`).classList.remove('hidden');
-        }
-
-        function returnHome() {
-            closeAdModal();
-            switchScreen('home');
-            updateReviewUI();
-            checkSavedProgress();
-            window.location.hash = '';
-            insertRandomAds(); // ホームに戻った時も広告をランダム再抽選
-        }
-
-        function saveProgress() {
-            const data = { activeQuestions, currentIndex, scoreCount };
-            localStorage.setItem('fp3_study_active', JSON.stringify(data));
-        }
-
-        function checkSavedProgress() {
-            const saved = localStorage.getItem('fp3_study_active');
-            const container = document.getElementById('resume-container');
-            if (saved) {
-                try {
-                    const data = JSON.parse(saved);
-                    if (data.activeQuestions && data.currentIndex < data.activeQuestions.length) {
-                        container.classList.remove('hidden');
-                        document.getElementById('resume-info-text').innerText = `進捗: 第 ${data.currentIndex + 1} 問目 / 全 ${data.activeQuestions.length} 問中`;
-                        return;
-                    }
-                } catch (e) {}
-            }
-            container.classList.add('hidden');
-        }
-
-        function resumeQuiz() {
-            const saved = localStorage.getItem('fp3_study_active');
-            if (saved) {
-                try {
-                    const data = JSON.parse(saved);
-                    activeQuestions = data.activeQuestions;
-                    currentIndex = data.currentIndex;
-                    scoreCount = data.scoreCount;
-                    switchScreen('quiz');
-                    renderQuestion();
-                } catch (e) {
-                    alert('復元に失敗しました。');
-                    localStorage.removeItem('fp3_study_active');
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+        function closeAd
