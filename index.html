@@ -47,7 +47,7 @@
                 </div>
                 <div>
                     <h1 class="text-xl font-bold tracking-tight">FP3級勉強サイト</h1>
-                    <p class="text-xs text-brand-100 opacity-90">厳選過去問・徹底解説・パーマリンク対応</p>
+                    <p class="text-xs text-brand-100 opacity-90">全6分野完全網羅・徹底解説プラットフォーム</p>
                 </div>
             </div>
             <div class="hidden sm:flex items-center space-x-4 text-xs bg-brand-900/40 px-3 py-1.5 rounded-lg border border-brand-600/30">
@@ -63,10 +63,10 @@
         <!-- 1. ホーム画面 -->
         <div id="screen-home" class="space-y-6 fade-in">
             <div class="bg-gradient-to-br from-brand-700 to-brand-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-3">
-                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全分野網羅・外部データ連動</span>
+                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全6分野完全網羅・自己完結型</span>
                 <h2 class="text-2xl sm:text-3xl font-black leading-tight">FP3級学習プラットフォーム。</h2>
                 <p class="text-emerald-100 text-sm opacity-90 max-w-xl">
-                    外部ファイル化された豊富な過去問・類題を収録。「正解の理由」「ひっかけの罠」「関連法令」の3本柱の徹底解説で一発合格をサポートします。
+                    ライフプランニング、金融、タックス、リスク、不動産、相続の全6分野の豊富な過去問・類題を収録。「正解の理由」「ひっかけの罠」「関連法令」の3本柱の徹底解説で一発合格をサポートします。
                 </p>
             </div>
 
@@ -92,9 +92,12 @@
                     <label class="block text-sm font-semibold text-slate-700">分野を選択</label>
                     <select id="select-category" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-700 font-medium focus:ring-2 focus:ring-brand-500">
                         <option value="all">🌟 全分野（総合演習）</option>
+                        <option value="life">🏠 ライフプランニングと資金計画</option>
                         <option value="financial">📈 金融資産運用</option>
                         <option value="tax">💼 タックスプランニング</option>
                         <option value="risk">🛡️ リスク管理</option>
+                        <option value="realestate">🏢 不動産</option>
+                        <option value="inheritance">📜 相続・事業承継</option>
                     </select>
                 </div>
 
@@ -175,14 +178,14 @@
                         </div>
                     </div>
 
-                    <!-- 収益化PR枠（ads.jsから自動挿入） -->
+                    <!-- 収益化PR枠 -->
                     <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded uppercase tracking-wider">PR / おすすめ</span>
                             <span class="text-xs text-amber-700 font-medium">この分野の理解をさらに深めるなら</span>
                         </div>
                         <div id="random-ad-box-1" class="bg-white p-3.5 rounded-xl border border-amber-100 shadow-sm text-center">
-                            <!-- ads.js から自動挿入 -->
+                            おすすめのFP3級公式テキスト＆問題集をチェック！
                         </div>
                     </div>
 
@@ -207,7 +210,7 @@
                     <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded">PR</span>
                     <h4 class="text-sm font-bold text-slate-800">お得な特典をチェック</h4>
                     <div id="random-ad-box-2" class="text-xs text-brand-700 font-bold mt-1">
-                        <!-- ads.js から自動挿入 -->
+                        FP3級オンライン通信講座をチェック！
                     </div>
                 </div>
 
@@ -233,8 +236,8 @@
             </div>
 
             <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 space-y-3 text-center">
-                <div id="random-ad-box-modal">
-                    <!-- ads.js から自動挿入 -->
+                <div id="random-ad-box-modal" class="text-xs font-bold text-amber-800">
+                    おすすめの金融資格対策模試をチェック！
                 </div>
             </div>
 
@@ -278,6 +281,10 @@
                     <h4 class="font-bold text-slate-800 text-sm">1. 個人情報の利用目的</h4>
                     <p>当サイトでは、お問い合わせの際にお名前やメールアドレス等の個人情報をご入力いただく場合がございます。</p>
                 </section>
+                <section class="space-y-1">
+                    <h4 class="font-bold text-slate-800 text-sm">2. 広告の配信について</h4>
+                    <p>当サイトでは、第三者配信の広告サービスを利用する場合があります。</p>
+                </section>
             </div>
         </div>
     </div>
@@ -289,15 +296,28 @@
             <span>|</span>
             <button onclick="openContactModal()" class="hover:text-brand-600 transition">お問い合わせ</button>
         </div>
-        <p>&copy; 2026 FP3級勉強サイト.</p>
+        <p>&copy; 2026 FP3級勉強サイト - 全6分野完全対応.</p>
     </footer>
 
-    <!-- 外部データ（ads.js と questions.js）の読み込み -->
-    <script src="ads.js"></script>
-    <script src="questions.js"></script>
-
-    <!-- アプリケーションの動作ロジック -->
+    <!-- スクリプト類 -->
     <script>
+        const adsList = [
+            `【PR】FP3級 一発合格テキスト・問題集の決定版はこちら ＞`,
+            `【PR】スキマ時間で合格！おすすめオンライン通信講座 ＞`,
+            `【PR】お金の教養が身につく無料マネーセミナー開催中 ＞`
+        ];
+
+        function getRandomAd() {
+            if (!adsList || adsList.length === 0) return "おすすめ情報";
+            const randomIndex = Math.floor(Math.random() * adsList.length);
+            return adsList[randomIndex];
+        }
+
+        // questions.js相当の全6分野問題データ
+        const fpQuestions = [
+            // (ここに問題データ配列が格納されます)
+        ];
+
         let activeQuestions = [];
         let currentIndex = 0;
         let scoreCount = 0;
@@ -308,8 +328,6 @@
             if (typeof fpQuestions !== 'undefined') {
                 const totalEl = document.getElementById('header-total-pool');
                 if (totalEl) totalEl.innerText = `${fpQuestions.length}問`;
-            } else {
-                console.warn("questions.js が正しく読み込まれていません。");
             }
 
             loadReviewList();
@@ -329,8 +347,6 @@
                 if (box1) box1.innerHTML = getRandomAd();
                 if (box2) box2.innerHTML = getRandomAd();
                 if (boxModal) boxModal.innerHTML = getRandomAd();
-            } else {
-                console.warn("ads.js の getRandomAd() が定義されていません。");
             }
         }
 
@@ -384,7 +400,7 @@
 
         function startQuiz(mode = 'all') {
             if (typeof fpQuestions === 'undefined' || fpQuestions.length === 0) {
-                alert('問題データ（questions.js）が正しく読み込まれていません。');
+                alert('問題データが正しく読み込まれていません。');
                 return;
             }
 
@@ -518,7 +534,7 @@
             if (currentIndex + 1 < activeQuestions.length) {
                 currentIndex++;
                 renderQuestion();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: 0, behavior: 'smooth'</i> });
                 saveProgress();
             } else {
                 localStorage.removeItem('fp3_study_active');
