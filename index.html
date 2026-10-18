@@ -63,10 +63,10 @@
         <!-- 1. ホーム画面 -->
         <div id="screen-home" class="space-y-6 fade-in">
             <div class="bg-gradient-to-br from-brand-700 to-brand-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-3">
-                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全6分野網羅・外部データ連動</span>
+                <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">全分野網羅・外部データ連動</span>
                 <h2 class="text-2xl sm:text-3xl font-black leading-tight">FP3級学習プラットフォーム。</h2>
                 <p class="text-emerald-100 text-sm opacity-90 max-w-xl">
-                    全6分野の豊富な過去問・類題を収録。「正解の理由」「ひっかけの罠」「関連法令」の3本柱の徹底解説で一発合格をサポートします。
+                    豊富な過去問・類題を収録。「正解の理由」「ひっかけの罠」「関連法令」の3本柱の徹底解説で一発合格をサポートします。
                 </p>
             </div>
 
@@ -92,12 +92,9 @@
                     <label class="block text-sm font-semibold text-slate-700">分野を選択</label>
                     <select id="select-category" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-700 font-medium focus:ring-2 focus:ring-brand-500">
                         <option value="all">🌟 全分野（総合演習）</option>
-                        <option value="life">🏠 ライフプランニングと資金計画</option>
-                        <option value="risk">🛡️ リスク管理</option>
                         <option value="financial">📈 金融資産運用</option>
                         <option value="tax">💼 タックスプランニング</option>
-                        <option value="realestate">🏢 不動産</option>
-                        <option value="inheritance">📜 相続・事業承継</option>
+                        <option value="risk">🛡️ リスク管理</option>
                     </select>
                 </div>
 
@@ -126,7 +123,7 @@
                     <div class="space-y-1 text-sm">
                         <h4 class="font-bold text-slate-800">FP資格保有 ITエンジニア</h4>
                         <p class="text-slate-600 leading-relaxed text-xs sm:text-sm">
-                            ファイナンシャル・プランニング技能士の知見とITエンジニアとしてのWeb開発ノウハウを活かし、FP3級受験生の学習効率を最大化する無料問題演習プラットフォームを開発・運営しています。
+                            ファイナンシャル・プランニング技能士の知見とITエンジニアとしてのWeb開発ノウハウを活かし、学習効率を最大化する無料問題演習プラットフォームを開発・運営しています。
                         </p>
                     </div>
                 </div>
@@ -178,7 +175,7 @@
                         </div>
                     </div>
 
-                    <!-- 【収益化PR枠：解説直下のゴールデンポジション（JSからランダム広告が自動挿入されます）】 -->
+                    <!-- 収益化PR枠 -->
                     <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded uppercase tracking-wider">PR / おすすめ</span>
@@ -206,7 +203,6 @@
                 <h2 class="text-2xl font-black text-slate-800">演習終了！お疲れ様でした</h2>
                 <p class="text-lg font-bold text-brand-700">正解数: <span id="result-score">0</span> / <span id="result-total">10</span>問</p>
                 
-                <!-- リザルト画面のPR枠（JSからランダム広告が自動挿入されます） -->
                 <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-5 border border-amber-200 text-left space-y-2">
                     <span class="text-[10px] bg-amber-500 text-white font-bold px-2 py-0.5 rounded">PR</span>
                     <h4 class="text-sm font-bold text-slate-800">お得な特典をチェック</h4>
@@ -259,7 +255,6 @@
                 <span>お問い合わせ</span>
             </h3>
             <div class="flex-grow overflow-y-auto">
-                <!-- Googleフォーム埋め込み領域（ご自身のGoogleフォームURLのiframeコードをここに貼り付けできます） -->
                 <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center space-y-3">
                     <p class="text-xs text-slate-600">ご意見・ご感想・問題の修正依頼などは下記フォームよりお問い合わせください。</p>
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDdummyFormIdHere/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" class="rounded-xl border border-slate-200">読み込み中…</iframe>
@@ -281,20 +276,11 @@
             <div class="flex-grow overflow-y-auto text-xs text-slate-600 space-y-4 pr-2 leading-relaxed">
                 <section class="space-y-1">
                     <h4 class="font-bold text-slate-800 text-sm">1. 個人情報の利用目的</h4>
-                    <p>当サイトでは、お問い合わせの際にお名前やメールアドレス等の個人情報をご入力いただく場合がございます。収集した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合にのみ利用し、これらの目的以外では利用いたしません。</p>
+                    <p>当サイトでは、お問い合わせの際にお名前やメールアドレス等の個人情報をご入力いただく場合がございます。</p>
                 </section>
                 <section class="space-y-1">
-                    <h4 class="font-bold text-slate-800 text-sm">2. 広告の配信について（Google AdSense 等）</h4>
-                    <p>当サイトでは、第三者配信の広告サービス（Google AdSense、A8.net 等）を利用する場合があります。広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。Cookieを使用することで当サイトはお客様のコンピュータを識別できるようになりますが、お客様個人を特定できるものではありません。</p>
-                    <p>GoogleによるCookieの無効化やGoogle AdSenseに関する詳細は「<a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener" class="text-brand-600 underline">Googleポリシーと規約</a>」をご覧ください。</p>
-                </section>
-                <section class="space-y-1">
-                    <h4 class="font-bold text-slate-800 text-sm">3. 免責事項</h4>
-                    <p>当サイトのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、正確性や安全性を保証するものではありません。当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</p>
-                </section>
-                <section class="space-y-1">
-                    <h4 class="font-bold text-slate-800 text-sm">4. 著作権・肖像権</h4>
-                    <p>当サイトで掲載している文章や画像などにつきましては、無断転載を禁止します。著作権や肖像権に関して問題がございましたら、お問い合わせフォームよりご連絡ください。迅速に対応いたします。</p>
+                    <h4 class="font-bold text-slate-800 text-sm">2. 広告の配信について</h4>
+                    <p>当サイトでは、第三者配信の広告サービスを利用する場合があります。</p>
                 </section>
             </div>
         </div>
@@ -307,14 +293,14 @@
             <span>|</span>
             <button onclick="openContactModal()" class="hover:text-brand-600 transition">お問い合わせ</button>
         </div>
-        <p>&copy; 2026 FP3級勉強サイト - SEO & Permalink Optimized Learning Platform.</p>
+        <p>&copy; 2026 FP3級勉強サイト.</p>
     </footer>
 
-    <!-- 外部データ（広告管理: ads.js と 問題データ: questions.js）の読み込み -->
+    <!-- 外部データ読み込み -->
     <script src="ads.js"></script>
     <script src="questions.js"></script>
 
-    <!-- アプリケーションの動作ロジック -->
+    <!-- アプリケーションの動作ロジック（修復完了版） -->
     <script>
         let activeQuestions = [];
         let currentIndex = 0;
@@ -365,6 +351,11 @@
             document.getElementById('privacy-modal').classList.add('hidden');
         }
 
+        function closeAdModal() {
+            document.getElementById('ad-modal').classList.add('hidden');
+            returnHome();
+        }
+
         function loadReviewList() {
             const saved = localStorage.getItem('fp3_study_review');
             reviewList = saved ? JSON.parse(saved) : [];
@@ -372,154 +363,4 @@
 
         function updateReviewUI() {
             loadReviewList();
-            document.getElementById('header-review-count').innerText = `${reviewList.length}問`;
-            document.getElementById('review-count-label').innerText = `復習待ち: ${reviewList.length}問`;
-            const btn = document.getElementById('btn-review-home');
-            if (reviewList.length === 0) {
-                btn.classList.add('opacity-50', 'cursor-not-allowed');
-            } else {
-                btn.classList.remove('opacity-50', 'cursor-not-allowed');
-            }
-        }
-
-        function startQuiz(mode = 'all') {
-            if (typeof fpQuestions === 'undefined' || fpQuestions.length === 0) {
-                alert('問題データ（questions.js）が正しく読み込まれていません。');
-                return;
-            }
-
-            let pool = [...fpQuestions];
-            if (mode === 'review') {
-                pool = fpQuestions.filter(q => reviewList.includes(q.id));
-                if (pool.length === 0) {
-                    alert('現在、復習リストに問題はありません！');
-                    return;
-                }
-            } else {
-                const cat = document.getElementById('select-category').value;
-                if (cat !== 'all') {
-                    pool = fpQuestions.filter(q => q.category === cat);
-                    if (pool.length === 0) {
-                        alert('選択された分野の問題がまだ登録されていません。');
-                        return;
-                    }
-                }
-            }
-
-            pool.sort(() => Math.random() - 0.5);
-            activeQuestions = pool.slice(0, Math.min(10, pool.length));
-            currentIndex = 0;
-            scoreCount = 0;
-            hasAnswered = false;
-
-            switchScreen('quiz');
-            renderQuestion();
-            saveProgress();
-        }
-
-        function renderQuestion() {
-            hasAnswered = false;
-            const q = activeQuestions[currentIndex];
-
-            window.location.hash = `question-${q.id}`;
-            document.getElementById('permalink-label').innerText = `問 ${currentIndex + 1} / ${activeQuestions.length} （個別URL: /questions/${q.id}）`;
-            document.getElementById('quiz-category-badge').innerText = q.categoryName || "FP3級分野";
-            document.getElementById('quiz-diff-badge').innerText = `難易度: ${q.difficulty || '★★☆'}`;
-            document.getElementById('question-text').innerText = q.question;
-
-            const container = document.getElementById('options-container');
-            container.innerHTML = '';
-
-            if (q.type === 'ox') {
-                container.className = "grid grid-cols-2 gap-4 pt-2";
-                container.innerHTML = `
-                    <button onclick="handleAnswer(0)" class="ans-btn p-5 rounded-2xl border-2 border-slate-200 hover:border-brand-500 bg-slate-50 font-bold text-lg text-slate-700 transition">
-                        〇 正しい (正)
-                    </button>
-                    <button onclick="handleAnswer(1)" class="ans-btn p-5 rounded-2xl border-2 border-slate-200 hover:border-brand-500 bg-slate-50 font-bold text-lg text-slate-700 transition">
-                        × 誤り (否)
-                    </button>
-                `;
-            } else {
-                container.className = "grid grid-cols-1 gap-3 pt-2";
-                q.options.forEach((opt, idx) => {
-                    const alpha = ['A', 'B', 'C'][idx];
-                    container.innerHTML += `
-                        <button onclick="handleAnswer(${idx})" class="ans-btn p-4 rounded-2xl border-2 border-slate-200 hover:border-brand-500 bg-slate-50 text-left font-bold text-sm sm:text-base text-slate-700 transition flex items-center space-x-3">
-                            <span class="w-8 h-8 rounded-lg bg-slate-200 flex items-center justify-center text-xs">${alpha}</span>
-                            <span>${opt}</span>
-                        </button>
-                    `;
-                });
-            }
-
-            document.getElementById('explanation-box').classList.add('hidden');
-        }
-
-        function handleAnswer(choice) {
-            if (hasAnswered) return;
-            hasAnswered = true;
-
-            const q = activeQuestions[currentIndex];
-            const isCorrect = (choice === q.answer);
-
-            if (isCorrect) {
-                scoreCount++;
-                reviewList = reviewList.filter(id => id !== q.id);
-            } else {
-                if (!reviewList.includes(q.id)) {
-                    reviewList.push(q.id);
-                }
-            }
-            localStorage.setItem('fp3_study_review', JSON.stringify(reviewList));
-            updateReviewUI();
-
-            const buttons = document.querySelectorAll('.ans-btn');
-            buttons.forEach((btn, idx) => {
-                btn.disabled = true;
-                if (idx === q.answer) {
-                    btn.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-800');
-                } else if (idx === choice && !isCorrect) {
-                    btn.classList.add('bg-rose-100', 'border-rose-500', 'text-rose-800');
-                } else {
-                    btn.classList.add('opacity-40');
-                }
-            });
-
-            const expBox = document.getElementById('explanation-box');
-            expBox.classList.remove('hidden');
-
-            const badge = document.getElementById('result-badge');
-            badge.className = isCorrect ? "p-4 rounded-xl text-sm font-bold bg-emerald-100 text-emerald-800" : "p-4 rounded-xl text-sm font-bold bg-rose-100 text-rose-800";
-            badge.innerHTML = isCorrect ? '🎉 正解です！素晴らしい！' : '❌ 不正解です（復習リストに追加されました）';
-
-            document.getElementById('exp-reason').innerText = q.explanation.reason;
-            document.getElementById('exp-trap').innerText = q.explanation.trap;
-            document.getElementById('exp-law').innerText = q.explanation.law;
-
-            saveProgress();
-            expBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-
-        function nextQuestion() {
-            if (currentIndex + 1 < activeQuestions.length) {
-                currentIndex++;
-                renderQuestion();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                saveProgress();
-            } else {
-                localStorage.removeItem('fp3_study_active');
-                document.getElementById('result-score').innerText = scoreCount;
-                document.getElementById('result-total').innerText = activeQuestions.length;
-                switchScreen('result');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                insertRandomAds();
-
-                setTimeout(() => {
-                    document.getElementById('ad-modal').classList.remove('hidden');
-                }, 400);
-            }
-        }
-
-        function closeAd
+            document.getElementById('header-
