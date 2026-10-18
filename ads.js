@@ -42,6 +42,119 @@ const adList = [
         `
     },
     {
+        id: "onsuku-banner-jr",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+G53376+4R8G+BYT9D" rel="nofollow">
+            <img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=261018913976&wid=001&eno=01&mid=s00000022192002010000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BEJHD+G53376+4R8G+BYT9D" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-partyparty1",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+4EDBOY+FOG+3HOTIP" rel="nofollow">
+            <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=261018913266&wid=001&eno=01&mid=s00000002032021111000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4BEJHD+4EDBOY+FOG+3HOTIP" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-partyparty2",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+4EDBOY+FOG+3H9DYP" rel="nofollow">
+            <img border="0" width="468" height="60" alt="" src="https://www21.a8.net/svt/bgt?aid=261018913266&wid=001&eno=01&mid=s00000002032021039000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BEJHD+4EDBOY+FOG+3H9DYP" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-fiole1",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHC+E0VLRM+2RIS+65EOH" rel="nofollow">
+            <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=261018912848&wid=001&eno=01&mid=s00000012898001033000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4BEJHC+E0VLRM+2RIS+65EOH" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-fiole2",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHC+E0VLRM+2RIS+60OXD" rel="nofollow">
+            <img border="0" width="468" height="60" alt="" src="https://www28.a8.net/svt/bgt?aid=261018912848&wid=001&eno=01&mid=s00000012898001011000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BEJHC+E0VLRM+2RIS+60OXD" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-otocon",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHC+EPADKI+1J1E+6DRLT" rel="nofollow">
+            <img border="0" width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=261018912889&wid=001&eno=01&mid=s00000007133001072000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BEJHC+EPADKI+1J1E+6DRLT" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-ladymaneyseminor1",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEET3+E97O8I+3JHQ+HWPVL" rel="nofollow">
+            <img border="0" width="468" height="60" alt="" src="https://www23.a8.net/svt/bgt?aid=261012855862&wid=001&eno=01&mid=s00000016523003008000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4BEET3+E97O8I+3JHQ+HWPVL" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-ladymaneyseminor2",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEET3+E97O8I+3JHQ+HWI5T" rel="nofollow">
+            <img border="0" width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=261012855862&wid=001&eno=01&mid=s00000016523003007000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4BEET3+E97O8I+3JHQ+HWI5T" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-shashin",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+4M3YK2+515E+5ZMCH" rel="nofollow">
+            <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=261018913279&wid=001&eno=01&mid=s00000023477001006000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEJHD+4M3YK2+515E+5ZMCH" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-QOO101",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+5MFEGI+4QYG+61RI9" rel="nofollow">
+            <img border="0" width="468" height="60" alt="" src="https://www24.a8.net/svt/bgt?aid=261018913340&wid=001&eno=01&mid=s00000022156001016000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BEJHD+5MFEGI+4QYG+61RI9" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-QOO102",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+5MFEGI+4QYG+65EOH" rel="nofollow">
+            <img border="0" width="300" height="300" alt="" src="https://www21.a8.net/svt/bgt?aid=261018913340&wid=001&eno=01&mid=s00000022156001033000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEJHD+5MFEGI+4QYG+65EOH" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-agoda",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+FA4JQQ+4X1W+NUMHT" rel="nofollow">
+            <img border="0" width="640" height="340" alt="" src="https://www26.a8.net/svt/bgt?aid=261018913924&wid=001&eno=01&mid=s00000022946004006000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEJHD+FA4JQQ+4X1W+NUMHT" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-travelist",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHD+FTRUPE+4XZI+HVNAP" rel="nofollow">
+            <img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=261018913957&wid=001&eno=01&mid=s00000023067003003000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4BEJHD+FTRUPE+4XZI+HVNAP" alt="">
+        `
+    },
+    {
+        id: "onsuku-banner-s",
+        html: `
+            <a href="https://px.a8.net/svt/ejp?a8mat=4BEJHE+RZE7M+1WP2+15Q22P" rel="nofollow">
+                <img border="0" width="468" height="60" alt="" src="https://www24.a8.net/svt/bgt?aid=261018914047&wid=001&eno=01&mid=s00000008903007008000&mc=1">
+            </a>
+            <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4BEJHE+RZE7M+1WP2+15Q22P" alt="">
+        `
+    },
+    {
         id: "onsuku-banner-small",
         html: `
             <a href="https://px.a8.net/svt/ejp?a8mat=4BEET1+DNS2GI+408S+5ZEMP" rel="nofollow" target="_blank">
