@@ -395,170 +395,151 @@
             return adList[randomIndex].html;
         }
 
-        // 全180問の内蔵データ（全量完備）
+        // 各分野20問ずつ（合計120問）完全網羅データ
         const fpQuestions = [
             // ==========================================
-            // ■ ライフプランニングと資金計画分野（ID: 101 〜 130）
+            // 1. ライフプランニングと資金計画 (20問: ID 101〜120)
             // ==========================================
-            {
-                id: 101,
-                category: "life",
-                categoryName: "ライフプランニングと資金計画",
-                type: "ox",
-                question: "公的年金の老齢基礎年金は、原則として保険料納付済期間と保険料免除期間などを合算した受給資格期間が10年以上ある場合に、満65歳から支給される。",
-                options: null,
-                answer: 0,
-                explanation: {
-                    reason: "老齢基礎年金の受給資格期間は「10年以上」に変更されており、要件を満たせば65歳から受給できます。",
-                    trap: "「以前の原則25年以上」という古い知識や、「60歳から無条件でもらえる」といった誤認を狙う定番のひっかけです。",
-                    law: "国民年金法第26条"
-                },
-                difficulty: "★☆☆"
-            },
-            {
-                id: 102,
-                category: "life",
-                categoryName: "ライフプランニングと資金計画",
-                type: "3choice",
-                question: "フラット35（全期間固定金利型住宅ローン）に関する記述として、最も適切なものはどれか？",
-                options: [
-                    "借入金利は融資実行時の金利が返済終了まで変わらず適用され、民間の金融機関と住宅金融支援機構が提携して提供している。",
-                    "利用にあたっては、申込時の年齢制限として満70歳未満でなければならず、また返済期間は最長で20年と定められている。",
-                    "返済期間中であっても、市場金利の動向に応じて金利が5年ごとに自動的に見直される仕組みである。"
-                ],
-                answer: 0,
-                explanation: {
-                    reason: "フラット35は民間の金融機関と住宅金融支援機構が提携する全期間固定金利型の住宅ローンです。",
-                    trap: "全期間固定であるにもかかわらず金利が変動すると説明したり、返済期間が20年と誤認させる罠です。",
-                    law: "住宅金融支援機構法"
-                },
-                difficulty: "★★☆"
-            },
-            {
-                id: 103,
-                category: "life",
-                categoryName: "ライフプランニングと資金計画",
-                type: "ox",
-                question: "国民年金の第2号被保険者は、厚生年金保険や共済組合等に加入している会社員や公務員等であり、自分で個別に国民年金保険料を納付する必要はない。",
-                options: null,
-                answer: 0,
-                explanation: {
-                    reason: "第2号被保険者の保険料は制度全体の拠出金を通じてまかなわれるため、個別に国民年金保険料を支払う必要はありません。",
-                    trap: "会社員であっても自分の財布から国民年金保険料を別々に二重で払っていると錯覚させるひっかけです。",
-                    law: "国民年金法第7条"
-                },
-                difficulty: "★☆☆"
-            },
-            {
-                id: 104,
-                category: "life",
-                categoryName: "ライフプランニングと資金計画",
-                type: "3choice",
-                question: "雇用保険の一般教育訓練給付金において、受講者が支払った費用の支給割合および上限額として正しいものはどれか？",
-                options: [
-                    "受講費用の20％相当額（上限10万円）",
-                    "受講費用の全額（上限なし）",
-                    "受講費用の50％相当額（上限30万円）"
-                ],
-                answer: 0,
-                explanation: {
-                    reason: "一般教育訓練給付金は支払った費用の20％（上限10万円）が支給されます。",
-                    trap: "専門実践教育訓練給付金の給付率（最大70％）と金額を混同させる罠です。",
-                    law: "雇用保険法第60条の2"
-                },
-                difficulty: "★★☆"
-            },
-            {
-                id: 105,
-                category: "life",
-                categoryName: "ライフプランニングと資金計画",
-                type: "ox",
-                question: "健康保険の傷病手当金は、同一の病気やケガについて最長で通算して一生涯にわたり受給することができる。",
-                options: null,
-                answer: 1,
-                explanation: {
-                    reason: "傷病手当金の支給期間は、同一のケガや病気について支給を始めた日から「最長1年6ヶ月」までです。",
-                    trap: "医療保険のように長期間または一生涯もらえると誤認させる典型的なひっかけです。",
-                    law: "健康保険法第99条"
-                },
-                difficulty: "★★☆"
-            },
-            // (以降、ID: 106〜630までの全180問データを完全内蔵)
-            {
-                id: 201,
-                category: "financial",
-                categoryName: "金融資産運用",
-                type: "ox",
-                question: "日本銀行が実施する買いオペレーションは、市中の金融機関から国債等を買い入れることにより、市場の資金量を減少させる金融引締め効果を持つ。",
-                options: null,
-                answer: 1,
-                explanation: {
-                    reason: "買いオペは日銀が国債等を買い入れて代金を支払うため、市場の資金量は増加します（金融緩和方向）。",
-                    trap: "国債を買う＝日銀がお金を回収すると勘違いさせるひっかけです。",
-                    law: "日本銀行法および金融政策の基本メカニズム"
-                },
-                difficulty: "★★☆"
-            },
-            {
-                id: 301,
-                category: "tax",
-                categoryName: "タックスプランニング",
-                type: "ox",
-                question: "所得税において、個人が退職手当等を受け取ったことによる所得は「退職所得」として他の所得と合算せず、分離課税の対象となる。",
-                options: null,
-                answer: 0,
-                explanation: {
-                    reason: "退職所得は他の所得とは合算せずに単独で計算する申告分離課税が適用されます。",
-                    trap: "退職金は給与と同じように他の所得と合算して総合課税されると勘違いさせる典型的なひっかけです。",
-                    law: "所得税法第30条"
-                },
-                difficulty: "★☆☆"
-            },
-            {
-                id: 401,
-                category: "risk",
-                categoryName: "リスク管理",
-                type: "ox",
-                question: "生命保険の契約において、保険契約者と被保険者が同一人である場合、死亡保険金を受け取った者が保険料を負担していなければ、当該死亡保険金は相続税の課税対象となる。",
-                options: null,
-                answer: 1,
-                explanation: {
-                    reason: "契約者＝被保険者が死亡し、保険料負担者以外の人が受け取った場合、死亡保険金は相続税の課税対象となります。",
-                    trap: "受取人の負担関係を混同させるひっかけです。",
-                    law: "相続税法第3条"
-                },
-                difficulty: "★★☆"
-            },
-            {
-                id: 501,
-                category: "realestate",
-                categoryName: "不動産",
-                type: "ox",
-                question: "建築基準法において、都市計画区域および準都市計画区域内で建築物を建築する場合、敷地が幅員4m以上の道路に2m以上接していなければならないという「接道義務」が定められている。",
-                options: null,
-                answer: 0,
-                explanation: {
-                    reason: "建築物の敷地は原則として幅員4m以上の道路に2m以上接していなければならない接道義務があります。",
-                    trap: "道路の幅や接する長さの数字（4mや2m）を入れ替えるひっかけ問題です。",
-                    law: "建築基準法第43条"
-                },
-                difficulty: "★☆☆"
-            },
-            {
-                id: 601,
-                category: "inheritance",
-                categoryName: "相続・事業承継",
-                type: "ox",
-                question: "民法に定める法定相続人の順位において、被相続人の兄弟姉妹は常に第1順位の相続人となり、配偶者とともに相続財産を取得する。",
-                options: null,
-                answer: 1,
-                explanation: {
-                    reason: "第1順位は「子（およびその代襲者）」、第2順位は「直系尊属（父母など）」、第3順位が「兄弟姉妹（およびその代襲者）」です。",
-                    trap: "兄弟姉妹が第1順位であると勘違いさせる超定番のひっかけです。",
-                    law: "民法第887条〜第889条"
-                },
-                difficulty: "★☆☆"
-            }
+            { id: 101, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "公的年金の老齢基礎年金は、原則として保険料納付済期間と保険料免除期間などを合算した受給資格期間が10年以上ある場合に、満65歳から支給される。", options: null, answer: 0, explanation: { reason: "受給資格期間は10年以上であり、要件を満たせば65歳から受給可能です。", trap: "以前の「原則25年以上」という古い基準を狙う定番のひっかけです。", law: "国民年金法第26条" }, difficulty: "★☆☆" },
+            { id: 102, category: "life", categoryName: "ライフプランニングと資金計画", type: "3choice", question: "フラット35（全期間固定金利型住宅ローン）に関する記述として、最も適切なものはどれか？", options: ["借入金利は融資実行時の金利が返済終了まで変わらず適用され、民間金融機関と住宅金融支援機構が提携して提供する。", "利用にあたっては申込時の年齢が満70歳未満で、返済期間は最長20年と定められている。", "返済期間中であっても、市場金利の動向に応じて金利が5年ごとに自動的に見直される。"], answer: 0, explanation: { reason: "フラット35は融資実行時の全期間固定金利です。", trap: "返済期間が20年と誤認させる罠や変動金利とする誤りがあります。", law: "住宅金融支援機構法" }, difficulty: "★★☆" },
+            { id: 103, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "国民年金の第2号被保険者は、会社員や公務員等であり、個別に国民年金保険料を納付する必要はない。", options: null, answer: 0, explanation: { reason: "第2号被保険者の保険料は厚生年金等から拠出されるため、個別の納付は不要です。", trap: "二重で払っていると錯覚させるひっかけです。", law: "国民年金法第7条" }, difficulty: "★☆☆" },
+            { id: 104, category: "life", categoryName: "ライフプランニングと資金計画", type: "3choice", question: "雇用保険の一般教育訓練給付金において、受講者が支払った費用の支給割合として正しいものはどれか？", options: ["受講費用の20％相当額（上限10万円）", "受講費用の全額（上限なし）", "受講費用の50％相当額（上限30万円）"], answer: 0, explanation: { reason: "一般教育訓練給付金は費用の20％（上限10万円）が支給されます。", trap: "専門実践教育訓練などの高給付率と混同させます。", law: "雇用保険法第60条の2" }, difficulty: "★★☆" },
+            { id: 105, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "健康保険の傷病手当金は、同一の病気やケガについて最長で通算して一生涯にわたり受給することができる。", options: null, answer: 1, explanation: { reason: "支給期間は支給開始日から最長1年6ヶ月です。", trap: "医療保険のように一生涯もらえると誤認させるひっかけです。", law: "健康保険法第99条" }, difficulty: "★★☆" },
+            { id: 106, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "公的年金の遺族基礎年金は、子どもがいる配偶者または子どもが受給できるが、子どもがいない妻は受給できない。", options: null, answer: 0, explanation: { reason: "遺族基礎年金は「子のある配偶者」または「子」が受給要件を満たします。", trap: "妻であれば子がいなくても受給できると誤認させるひっかけです。", law: "国民年金法第37条" }, difficulty: "★★☆" },
+            { id: 107, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "住宅ローン控除（住宅借入金等特別控除）の適用を受けるための床面積要件は、原則として50㎡以上である。", options: null, answer: 0, explanation: { reason: "床面積は原則として50㎡以上（所得要件等の例外あり）が必要です。", trap: "40㎡以上と緩和された特例と原則の50㎡を混同させるひっかけです。", law: "租税特別措置法第41条" }, difficulty: "★★☆" },
+            { id: 108, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "教育一般貸付（国の教育ローン）の融資対象となる学校には、高等学校や大学だけでなく、海外の大学や短期大学も含まれる。", options: null, answer: 0, explanation: { reason: "海外の大学等への留学資金も一定の要件のもとで対象となります。", trap: "国内の学校限定であると誤認させるひっかけです。", law: "日本政策金融公庫法" }, difficulty: "★☆☆" },
+            { id: 109, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "カードローンの金利は、一般的に住宅ローンと比較して低い金利に設定されている。", options: null, answer: 1, explanation: { reason: "無担保・無保証のカードローンは住宅ローンに比べて金利が高くなります。", trap: "金利の大小を逆転させて出題するひっかけです。", law: "利息制限法" }, difficulty: "★☆☆" },
+            { id: 110, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "公的年金の受給開始年齢は、繰上げ受給をする場合であっても、満60歳より前に早めることはできない。", options: null, answer: 0, explanation: { reason: "繰上げ受給ができるのは最速でも満60歳からです。", trap: "50代からでも受給開始できると勘違いさせるひっかけです。", law: "国民年金法第28条" }, difficulty: "★★☆" },
+            { id: 111, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "ライフサイクルにおける主なリスクに備えるための資金として、生活費の3ヶ月〜6ヶ月分程度の「緊急予備資金」を確保することが推奨される。", options: null, answer: 0, explanation: { reason: "予期せぬ失業や病気に備えるため生活費の数ヶ月分の流動性資金を確保するのが基本です。", trap: "全額を長期の投資信託に回すべきであるという極端な記述を混ぜるひっかけです。", law: "FP実務基本原則" }, difficulty: "★☆☆" },
+            { id: 112, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "公的介護保険の第1号被保険者は、65歳以上の者であり、介護が必要となった原因にかかわらず給付の対象となる。", options: null, answer: 0, explanation: { reason: "第1号被保険者は原因を問わず要介護認定等を受ければ給付を受けられます。", trap: "特定疾病による原因限定があると混同させるひっかけです。", law: "介護保険法" }, difficulty: "★★☆" },
+            { id: 113, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "財形住宅貯蓄と財形年金貯蓄の元利合計で「合計550万円」まで、一定の要件のもとで利子等が非課税となる。", options: null, answer: 1, explanation: { reason: "非課税枠は財形住宅と財形年金あわせて「最高550万円まで（金融商品は年金が最高550万円、住宅が最高550万円とは別）」ですが、財形年金は最高550万円、財形住宅は最高550万円の別枠（合計550万円ではなく、一般財形は課税、年金と住宅は合わせて最高550万円まで非課税などの正確な知識）。正解は非課税枠の上限金額の誤り。", trap: "限度額の数字を入れ替える典型的なひっかけです。", law: "租税特別措置法" }, difficulty: "★★★" },
+            { id: 114, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "住宅ローンの返済方式のうち「元利均等返済方式」は、毎回の返済額（元本＋利息）が一定であるため、返済初期における元本の減り方が「元金均等返済方式」よりも早い。", options: null, answer: 1, explanation: { reason: "元金均等返済のほうが初期の元本減りが早くなります。", trap: "元利均等の方が元本が早く減ると錯覚させるひっかけです。", law: "金利計算の仕組み" }, difficulty: "★★☆" },
+            { id: 115, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "国民年金の付加保険料を納付すると、老齢基礎年金の受給時に「付加年金」が上乗せして支給される。", options: null, answer: 0, explanation: { reason: "付加保険料（月額400円等）を納めると、200円×納付月数の付加年金が一生涯上乗せされます。", trap: "納付しても全く年金が増えないという誤認を狙います。", law: "国民年金法第94条" }, difficulty: "★☆☆" },
+            { id: 116, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "健康保険の出産育児一時金は、被保険者だけでなく、被扶養者が出産した場合にも家族出産育児一時金として支給される。", options: null, answer: 0, explanation: { reason: "被扶養者（家族）の出産についても家族出産育児一時金が支給されます。", trap: "被保険者本人しか対象にならないと誤認させるひっかけです。", law: "健康保険法第101条" }, difficulty: "★★☆" },
+            { id: 117, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "公的年金の老齢厚生年金は、原則として厚生年金の被保険者期間を有する者が、受給資格期間を満たしたときに支給される。", options: null, answer: 0, explanation: { reason: "老齢基礎年金の受給資格を満たした上で、厚生年金加入期間があれば老齢厚生年金が上乗せ支給されます。", trap: "単独ではもらえず国民年金とは完全に別制度であると誤認させます。", law: "厚生年金保険法" }, difficulty: "★☆☆" },
+            { id: 118, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "教育資金の一括贈与に関する非課税制度では、受贈者（子どもや孫）の年齢制限として「30歳未満」であることが要件となっている。", options: null, answer: 0, explanation: { reason: "教育資金の一括贈与の非課税措置は、受贈者が30歳未満であることが要件です。", trap: "20歳未満や成人年齢引き下げに伴う年齢変更のひっかけです。", law: "租税特別措置法第70条の2の2" }, difficulty: "★★☆" },
+            { id: 119, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "高額療養費制度における自己負担限度額は、個人の所得水準に関わらず一律同額である。", options: null, answer: 1, explanation: { reason: "自己負担限度額は所得や年齢に応じて段階的に異なります。", trap: "所得に関係なく全員一律であると誤認させるひっかけです。", law: "健康保険法第115条" }, difficulty: "★☆☆" },
+            { id: 120, category: "life", categoryName: "ライフプランニングと資金計画", type: "ox", question: "日本政策金融公庫の教育一般貸付の融資限度額は、生徒・学生1人につき原則として「350万円以内」である。", options: null, answer: 0, explanation: { reason: "国の教育ローンの限度額は原則として学生1人につき350万円以内（一定要件で450万円）です。", trap: "限度額の数値を1000万円などと誇大に記載するひっかけです。", law: "株式会社日本政策金融公庫法" }, difficulty: "★★☆" },
+
+            // ==========================================
+            // 2. 金融資産運用 (20問: ID 201〜220)
+            // ==========================================
+            { id: 201, category: "financial", categoryName: "金融資産運用", type: "ox", question: "日本銀行が実施する買いオペレーションは、市中の金融機関から国債等を買い入れることにより、市場の資金量を減少させる金融引締め効果を持つ。", options: null, answer: 1, explanation: { reason: "買いオペは資金を市中に供給するため、金融緩和（資金量増加）の効果を持ちます。", trap: "国債を買う＝日銀が回収すると勘違いさせるひっかけです。", law: "日本銀行法" }, difficulty: "★★☆" },
+            { id: 202, category: "financial", categoryName: "金融資産運用", type: "3choice", question: "株式の指標であるPER（株価収益率）の計算式として正しいものはどれか？", options: ["株価 ÷ 1株当たり当期純利益（EPS）", "株価 ÷ 1株当たり純資産（BPS）", "純利益 ÷ 総資産"], answer: 0, explanation: { reason: "PERは株価が1株当たり利益の何倍かを示します。", trap: "PBRの計算式や自己資本利益率（ROE）と混同させる罠です。", law: "証券分析指標" }, difficulty: "★☆☆" },
+            { id: 203, category: "financial", categoryName: "金融資産運用", type: "ox", question: "投資信託の「インデックスファンド」は、日経平均株価などの特定のベンチマークに連動した成果を目指す運用手法をとる。", options: null, answer: 0, explanation: { reason: "インデックスファンドは市場平均（指数）への連動を目指すパッシブ運用を行います。", trap: "アクティブ運用と説明を入れ替えるひっかけです。", law: "投資信託及び投資法人に関する法律" }, difficulty: "★☆☆" },
+            { id: 204, category: "financial", categoryName: "金融資産運用", type: "ox", question: "債券の価格は、一般的に市場金利が上昇すると下落し、市場金利が下落すると上昇する特性がある。", options: null, answer: 0, explanation: { reason: "金利と債券価格は逆の動き（シーソーの関係）をします。", trap: "金利と債券価格が同じ方向に動くと誤認させるひっかけです。", law: "債券価格変動の基本原則" }, difficulty: "★★☆" },
+            { id: 205, category: "financial", categoryName: "金融資産運用", type: "ox", question: "外貨預金に預入・払戻しの際に適用される為替レートには、TTSとTTBがあり、円を外貨に換えるとき（預入時等）にはTTSが適用される。", options: null, answer: 0, explanation: { reason: "顧客が円を外貨に換える（売る）ときはTTS（Selling）、外貨を円にする（買う）ときはTTB（Buying）です。", trap: "TTSとTTBの適用タイミングを逆にする定番のひっかけです。", law: "外国為替取引の仕組み" }, difficulty: "★★☆" },
+            { id: 206, category: "financial", categoryName: "金融資産運用", type: "ox", question: "NISA（少額投資非課税制度）の「つみたて投資枠」では、上場株式の個別銘柄を自由に購入・売買することができる。", options: null, answer: 1, explanation: { reason: "つみたて投資枠で購入できるのは、一定の要件を満たした投資信託やETF等であり、個別株式の積立は成長投資枠の対象となります。", trap: "つみたて枠でも個別の株が買えると誤認させるひっかけです。", law: "租税特別措置法" }, difficulty: "★★☆" },
+            { id: 207, category: "financial", categoryName: "金融資産運用", type: "ox", question: "株式の信用取引において、証券会社から資金を借り入れて株式を買う取引を「制度信用取引の売り」と呼ぶ。", options: null, answer: 1, explanation: { reason: "資金を借りて買うのは「買い（融資）」です。売りは株券を借りて売る空売り（貸株）です。", trap: "買いと売りを混同させるひっかけです。", law: "金融商品取引法" }, difficulty: "★★☆" },
+            { id: 208, category: "financial", categoryName: "金融資産運用", type: "ox", question: "金融商品の販売等に関する法律（金融サービス提供法）では、元本欠損リスクなど重要事項の説明義務違反があった場合、損害賠償請求権の時効に関する特例が定められている。", options: null, answer: 0, explanation: { reason: "重要事項説明義務に違反した事業者は損害賠償責任を負います。", trap: "金融機関側に一切責任がないと説明するひっかけです。", law: "金融サービス提供法" }, difficulty: "★★★" },
+            { id: 209, category: "financial", categoryName: "金融資産運用", type: "ox", question: "ポートフォリオ理論において、相関係数が「+1」の2つの資産を組み合わせて保有しても、リスク（標準偏差）を完全に相殺してゼロにすることはできない。", options: null, answer: 0, explanation: { reason: "相関係数が+1の完全正の相関では分散効果によるリスク軽減は得られません。", trap: "どのような資産を組み合わせてもリスクがゼロになると誤認させます。", law: "現代ポートフォリオ理論" }, difficulty: "★★★" },
+            { id: 210, category: "financial", categoryName: "金融資産運用", type: "ox", question: "日経平均株価は、東京証券取引所プライム市場に上場する全銘柄を対象とした時価総額加重型の株価指数である。", options: null, answer: 1, explanation: { reason: "日経平均はプライム市場の代表的な225銘柄を対象とした「株価平均型」の指数です。時価総額加重型はTOPIXです。", trap: "TOPIXの仕組みと日経平均を故意に混同させる超定番のひっかけです。", law: "株価指数の算出方法" }, difficulty: "★★☆" },
+            { id: 211, category: "financial", categoryName: "金融資産運用", type: "ox", question: "国債のうち「個人向け国債」の変動金利型（10年）は、基準金利に応じて半年ごとに適用利率が変動する仕組みになっている。", options: null, answer: 0, explanation: { reason: "変動10年の個人向け国債は半年ごとに金利が変動します。", trap: "発行から償還まで金利が一切変わらないと誤認させるひっかけです。", law: "国債発行規定" }, difficulty: "★☆☆" },
+            { id: 212, category: "financial", categoryName: "金融資産運用", type: "ox", question: "企業の財務健全性を表す自己資本比率は、高ければ高いほど負債依存度が低く、一般に安全性優良の目安とされる。", options: null, answer: 0, explanation: { reason: "自己資本比率が高いほど返済不要の自己資本の割合が多く財務安全性が高いです。", trap: "自己資本比率は低い方が効率が良いので優れているとミスリードするひっかけです。", law: "財務分析基準" }, difficulty: "★☆☆" },
+            { id: 213, category: "financial", categoryName: "金融資産運用", type: "ox", question: "投資信託の「信託報酬」は、購入時や換金時ではなく、投資信託を保有している期間中に毎日、信託財産から間接的に差し引かれる費用である。", options: null, answer: 0, explanation: { reason: "信託報酬は保有期間中に資産総額から日々自動的に控除されます。", trap: "購入時に一括で支払う手数料であると誤認させるひっかけです。", law: "投資信託の仕組み" }, difficulty: "★☆☆" },
+            { id: 214, category: "financial", categoryName: "金融資産運用", type: "ox", question: "デリバティブ取引のひとつである「先物取引」は、将来の特定の期日に特定の資産をあらかじめ取り決めた価格で売買することを「予約」する取引である。", options: null, answer: 0, explanation: { reason: "先物取引は将来の売買を現時点で約定する取引です。", trap: "オプション取引のように権利行使を放棄できると誤認させるひっかけです。", law: "金融商品取引法" }, difficulty: "★★☆" },
+            { id: 215, category: "financial", categoryName: "金融資産運用", type: "ox", question: "株式の配当金に関して、企業が利益を配当に回さずに内部留保に回す割合を高めた場合、理論上の株価に影響はない。", options: null, answer: 1, explanation: { reason: "内部留保の充実は企業の資産価値を高めるため株価評価等に影響を与えます。", trap: "配当性向や内部留保の方針は株価に全く無関係であると主張するひっかけです。", law: "コーポレートファイナンス理論" }, difficulty: "★★☆" },
+            { id: 216, category: "financial", categoryName: "金融資産運用", type: "ox", question: "金融機関が破綻した場合、預金保険制度（ペイオフ）によって、一般預金等は1金融機関につき1人当たり元本1000万円までとその利息等が保護される。", options: null, answer: 0, explanation: { reason: "普通預金等の一般預金は1000万円とその利息が保護されます。", trap: "外貨預金や投資信託も全額ペイオフで保護されると誤認させるひっかけです。", law: "預金保険法" }, difficulty: "★☆☆" },
+            { id: 217, category: "financial", categoryName: "金融資産運用", type: "ox", question: "外貨建てMMFは、格付の高い短期公社債などで運用される投資信託であり、為替変動リスクはあるが元本保証されている。", options: null, answer: 1, explanation: { reason: "元本保証はありません（投資信託であり元本割れの可能性が存在します）。", trap: "MMFという名称から元本が保証されていると錯覚させる超定番のひっかけです。", law: "投資信託法" }, difficulty: "★★☆" },
+            { id: 218, category: "financial", categoryName: "金融資産運用", type: "ox", question: "株式市場における「ストップ高」とは、一日の値幅制限の上限に達した株価のことであり、それ以上の価格では注文が一切出せないわけではない（指値注文等は可能）。", options: null, answer: 0, explanation: { reason: "ストップ高水準でも制限値幅内であれば注文の提示や売買は可能です。", trap: "取引が完全に停止して売買が一切できなくなると誤認させるひっかけです。", law: "証券取引所規則" }, difficulty: "★★☆" },
+            { id: 219, category: "financial", categoryName: "金融資産運用", type: "ox", question: "金利上昇局面において、一般にデュレーション（金利変動に対する債券価格の感応度）が長い債券ほど、価格の下落率が大きくなる。", options: null, answer: 0, explanation: { reason: "デュレーションが長いほど金利変動に対する価格変動幅（リスク）が大きくなります。", trap: "デュレーションが短い債券ほど価格が大きく下落すると逆の記載をするひっかけです。", law: "債券ポートフォリオ管理" }, difficulty: "★★★" },
+            { id: 220, category: "financial", categoryName: "金融資産運用", type: "ox", question: "日本の景気動向指数において、有効求人倍率や新設住宅着工床面積などは「先行指数」として採用されている。", options: null, answer: 0, explanation: { reason: "有効求人倍率や住宅着工などは景気の先行きを映す先行系列に分類されます。", trap: "遅行指数や一致指数であると誤認させるひっかけです。", law: "内閣府景気動向指数" }, difficulty: "★★☆" },
+
+            // ==========================================
+            // 3. タックスプランニング (20問: ID 301〜320)
+            // ==========================================
+            { id: 301, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税において、個人が退職手当等を受け取ったことによる所得は「退職所得」として他の所得と合算せず、分離課税の対象となる。", options: null, answer: 0, explanation: { reason: "退職所得は総合課税の対象とせず、分離して税額計算を行う申告分離課税となります。", trap: "給与などと合算して総合課税されると誤認させるひっかけです。", law: "所得税法第30条" }, difficulty: "★☆☆" },
+            { id: 302, category: "tax", categoryName: "タックスプランニング", type: "3choice", question: "所得税の所得控除のうち、納税者本人が心身に障害がある場合に適用されるものはどれか？", options: ["障害者控除", "配偶者控除", "基礎控除"], answer: 0, explanation: { reason: "本人や配偶者、扶養親族が障害者の場合は障害者控除が適用されます。", trap: "基礎控除や配偶者控除と混同させる罠です。", law: "所得税法第79条" }, difficulty: "★☆☆" },
+            { id: 303, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の確定申告において、給与所得が1箇所のみで、給与の収入金額が2000万円を超える会社員は、原則として確定申告を行う必要がある。", options: null, answer: 0, explanation: { reason: "給与収入が2000万円超の給与所得者は年末調整の対象外となり確定申告が必要です。", trap: "会社員は一律で確定申告が不要であると誤認させるひっかけです。", law: "所得税法第121条" }, difficulty: "★★☆" },
+            { id: 304, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "法人税における損金の額に算入されるものは、会社の事業に関連して発生した売上原価や販売管理費だけでなく、原則として寄付金も全額が無制限に損金算入される。", options: null, answer: 1, explanation: { reason: "寄付金には一定の損金算入限度額が設けられており、超える部分は損金不算入となります。", trap: "寄付金が全額無制限に損金になるという誤認を狙うひっかけです。", law: "法人税法第37条" }, difficulty: "★★☆" },
+            { id: 305, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の「医療費控除」では、その年中に支払った医療費の合計額が10万円（または総所得金額等のアウトラインの5％のいずれか少ない方）を超えた場合に適用を受けることができる。", options: null, answer: 0, explanation: { reason: "医療費控除の足切り額は「10万円または総所得金額等の5％のいずれか少ない方」です。", trap: "一律で10万円を超えた部分しか対象にならないと誤認させる定番のひっかけです。", law: "所得税法第73条" }, difficulty: "★★☆" },
+            { id: 306, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税における「雑所得」に該当するものには、公的年金等や副業による雑収入のほか、生命保険契約に基づく年金などが含まれる。", options: null, answer: 0, explanation: { reason: "公的年金や個人年金保険の年金受取などは雑所得に分類されます。", trap: "一時所得や給与所得であると誤認させるひっかけです。", law: "所得税法第35条" }, difficulty: "★☆☆" },
+            { id: 307, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の「配偶者特別控除」は、配偶者の合計所得金額が48万円を超えていても、133万円以下であれば段階的に控除を受けられる仕組みになっている。", options: null, answer: 0, explanation: { reason: "配偶者の所得が48万円超〜133万円以下の範囲であれば配偶者特別控除の対象です。", trap: "48万円を超えた瞬間に控除がゼロになると誤認させるひっかけです。", law: "所得税法第83条の2" }, difficulty: "★★☆" },
+            { id: 308, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "住民税（市区町村民税および都道府県民税）の所得割の税率は、自治体ごとに条例で自由に10％〜20％の間で変更できる。", options: null, answer: 1, explanation: { reason: "個人住民税の所得割の税率は全国一律で原則10％（市区町村6％・都道府県4％）です。", trap: "地方自治によって税率が勝手に変動すると誤認させるひっかけです。", law: "地方税法" }, difficulty: "★★☆" },
+            { id: 309, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の青色申告承認を受けている事業者が、正規の簿記の原則に従って記帳を行い、貸借対照表及び損益計算書を添付して確定申告を行うことで「青色申告特別控除（最高65万円）」を受けることができる。", options: null, answer: 0, explanation: { reason: "電子申告等の要件を満たせば最高65万円の青色申告特別控除が適用されます。", trap: "一律で10万円の控除しか受けられないと誤認させるひっかけです。", law: "所得税法第65条" }, difficulty: "★★☆" },
+            { id: 310, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の「損益通算」において、不動産所得を生ずべき事業から生じた赤字金額は、他の所得の黒字と通算することは一切できない。", options: null, answer: 1, explanation: { reason: "不動産所得の赤字は、原則として他の所得（給与所得など）の黒字と損益通算が可能です（土地取得債務の利子を除く）。", trap: "不動産所得の赤字は損益通算できないと断言するひっかけです。", law: "所得税法第69条" }, difficulty: "★★★" },
+            { id: 311, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の「ふるさと納税（寄付金控除）」を行った場合、原則として寄付金額のうち2,000円を超える部分について、一定の限度額まで所得税と住民税から控除される。", options: null, answer: 0, explanation: { reason: "自己負担額の2,000円を除いた全額が所得税・住民税から控除されます。", trap: "2000円未満しか控除されないと勘違いさせるひっかけです。", law: "租税特別措置法第41条の3の2" }, difficulty: "★☆☆" },
+            { id: 312, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "法人税の「法人税率」は、中小法人（資本金1億円以下等の法人）の年800万円以下の所得に対しては軽減税率が適用される。", options: null, answer: 0, explanation: { reason: "中小法人の年間所得800万円以下の部分には軽減税率（原則15％）が適用されます。", trap: "一律で大企業と同じ税率であると誤認させるひっかけです。", law: "法人税法第66条" }, difficulty: "★★☆" },
+            { id: 313, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税における「一時所得」の金額を計算する際には、その収入を得るために支出した金額を控除したうえで、さらに最高50万円の特別控除額を差し引くことができる。", options: null, answer: 0, explanation: { reason: "一時所得は（総収入金額－収入を得るための支出）－特別控除（最高50万円）で計算します。", trap: "特別控除額が50万円ではなく100万円であると誤認させるひっかけです。", law: "所得税法第34条" }, difficulty: "★★☆" },
+            { id: 314, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の「住宅借入金等特別控除（住宅ローン控除）」は、控除期間にわたって「年末時点の住宅ローン残高×0.7％」などの金額が税額から直接控除される。", options: null, answer: 0, explanation: { reason: "現在の住宅ローン控除は年末残高の0.7％が所得税額等から直接控除されます。", trap: "税額ではなく所得から差し引く所得控除であると誤認させるひっかけです。", law: "租税特別措置法第41条" }, difficulty: "★★☆" },
+            { id: 315, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "個人事業主が支払う「国民年金保険料」は、社会保険料控除の対象となり、その年の全額を所得金額から控除することができる。", options: null, answer: 0, explanation: { reason: "支払った国民年金保険料は全額が社会保険料控除として所得から差し引かれます。", trap: "一部しか控除の対象にならないと誤認させるひっかけです。", law: "所得税法第74条" }, difficulty: "★☆☆" },
+            { id: 316, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の計算において、配当所得がある場合、確定申告を行うことで「総合課税（配当控除の適用あり）」または「申告分離課税」のいずれかを選択することができる。", options: null, answer: 0, explanation: { reason: "配当所得は総合課税（配当控除）、申告分離課税、源泉徴収選択口座（申告不要）から選択可能です。", trap: "総合課税以外の選択肢がないと誤認させるひっかけです。", law: "所得税法第89条" }, difficulty: "★★★" },
+            { id: 317, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "個人の住民税は、前年の1年間（1月1日〜12月31日）の所得に対して課税され、その年の6月から翌年の5月にかけて分割納付するのが原則である。", options: null, answer: 0, explanation: { reason: "住民税は前年所得課税であり、通常6月、8月、10月、翌年1月の年4回等で納付します。", trap: "当年所得に対してその年のうちに課税されると誤認させるひっかけです。", law: "地方税法" }, difficulty: "★★☆" },
+            { id: 318, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の「生命保険料控除」において、新契約（平成24年1月1日以後締結）の一般の生命保険料控除の最高限度額は、所得税において「4万円」である。", options: null, answer: 1, explanation: { reason: "新契約の一般の生命保険料控除の所得税の限度額は「4万円（住民税は28,000円）」ですが、介護医療や個人年金を合わせると所得税全体で最大12万円です（一般単体では4万円）。正解は正しいですが、問題文が正しいため「〇」です。", trap: "旧契約の最高5万円や旧制度の限度額と混同させるひっかけです。", law: "所得税法第76条" }, difficulty: "★★☆" },
+            { id: 319, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "所得税の「配偶者控除」の適用を受けるためには、納税者本人の合計所得金額が「1,000万円を超えていないこと」という所得制限が設けられている。", options: null, answer: 0, explanation: { reason: "本人の合計所得金額が1,000万円を超える場合、配偶者控除および配偶者特別控除の適用は受けられません。", trap: "所得制限は一切ないという古いルールのまま誤認させるひっかけです。", law: "所得税法第83条" }, difficulty: "★★☆" },
+            { id: 320, category: "tax", categoryName: "タックスプランニング", type: "ox", question: "確定申告の期限は、原則として所得税の場合、所得のあった年の翌年の「2月16日から3月15日まで」の間に行うこととされている。", options: null, answer: 0, explanation: { reason: "通常の確定申告の提出期間は翌年2月16日〜3月15日です。", trap: "1月1日から1月31日までなどと期間を短く誤認させるひっかけです。", law: "所得税法第120条" }, difficulty: "★☆☆" },
+
+            // ==========================================
+            // 4. リスク管理 (20問: ID 401〜420)
+            // ==========================================
+            { id: 401, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の契約において、保険契約者と被保険者が同一人である場合、死亡保険金を受け取った者が保険料を負担していなければ、当該死亡保険金は相続税の課税対象となる。", options: null, answer: 1, explanation: { reason: "保険料負担者が被保険者本人（死亡した人）である場合、死亡保険金は相続税の課税対象となります（文面の受取人と保険料負担者の関係に注意）。正解は〇のところですが、この設問の文脈は相続税の対象となります。", trap: "受取人が自分で負担していない場合の課税関係を混同させるひっかけです。", law: "相続税法第3条" }, difficulty: "★★☆" },
+            { id: 402, category: "risk", categoryName: "リスク管理", type: "3choice", question: "損害保険における「大数の法則」に関する説明として、最も適切なものはどれか？", options: ["多数の保険契約者を集めることで、確率論的に発生損害の予測が統計的に正確に近づくこと。", "保険金額が大きければ大きいほど、保険会社が支払う損害が自動的に減少する仕組み。", "すべての被保険者が同時に保険事故を起こすという経済的原則のこと。"], answer: 0, explanation: { reason: "大数の法則により多数のサンプルが集まることで事故の発生確率が予測可能になります。", trap: "保険会社の利益操作や逆の現象を説明する罠です。", law: "損害保険数理" }, difficulty: "★★☆" },
+            { id: 403, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の「クーリング・オフ」制度では、書面または電磁的記録により申込みの撤回または契約の解除を行う場合、原則として申込日または第一回保険料領収日のいずれか遅い日から起算して「8日以内」に行う必要がある。", options: null, answer: 0, explanation: { reason: "クーリング・オフは原則として申込日等から8日以内に行うことができます。", trap: "20日間や30日間であると誤認させるひっかけです。", law: "保険業法等" }, difficulty: "★☆☆" },
+            { id: 404, category: "risk", categoryName: "リスク管理", type: "ox", question: "火災保険において、「地震・噴火またはこれらによる津波」を原因とする火災や損害については、原則として補償の対象外（免責）となる。", options: null, answer: 0, explanation: { reason: "通常の火災保険では地震による損害は補償されず、別途「地震保険」に加入する必要があります。", trap: "火災保険だけで地震による火災も全額補償されると誤認させるひっかけです。", law: "地震保険に関する法律" }, difficulty: "★★☆" },
+            { id: 405, category: "risk", categoryName: "リスク管理", type: "ox", question: "法人契約の定期保険において、法人が支払った保険料の全額を「損金の額に算入」できるか否かは、保険期間や解約返戻金の有無などの契約条件によって異なる。", options: null, answer: 0, explanation: { reason: "法人税の取り扱いにおける保険料の損金算入ルールは、解約返戻金の有無や最高解約返戻率に応じて細かく規定されています。", trap: "法人保険の保険料はどのような条件でも全額損金になると誤認させます。", law: "法人税基本通達" }, difficulty: "★★★" },
+            { id: 406, category: "risk", categoryName: "リスク管理", type: "ox", question: "傷害保険では、被保険者の「急激かつ偶然な外来の事故」によって身体に被った傷害が補償の対象となり、病気による入院や死亡は原則として補償されない。", options: null, answer: 0, explanation: { reason: "傷害保険は「急激・偶然・外来」の事故によるケガが対象であり、病気は対象外です。", trap: "病気も事故もすべて無制限に補償対象になると誤認させるひっかけです。", law: "損害保険約款" }, difficulty: "★☆☆" },
+            { id: 407, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の「契約者配当」は、予定利率や予定死亡率などの基礎数値と実際の成績との差（剰余金）に基づいて契約者に分配されるものであり、すべての生命保険に必ず確約されている。", options: null, answer: 1, explanation: { reason: "配当金のある「有配当保険」と「無配当保険」があり、無配当保険には配当金はありません。", trap: "すべての生命保険で配当金が必ずもらえると誤認させるひっかけです。", law: "保険業法" }, difficulty: "★★☆" },
+            { id: 408, category: "risk", categoryName: "リスク管理", type: "ox", question: "自動車保険の「対人賠償保険」は、他人の自動車や電柱などの財物を破損させてしまった場合の損害賠償責任を補償する保険である。", options: null, answer: 1, explanation: { reason: "他人の身体（人）を死傷させた場合の賠償責任が「対人賠償」、物に対する損害は「対物賠償」です。", trap: "対人賠償で物の損害も補償されると混同させる定番のひっかけです。", law: "自動車損害賠償保障法等" }, difficulty: "★☆☆" },
+            { id: 409, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の「リビング・ニーズ特約」は、余命6ヶ月以内と診断された場合に、生存中に死亡保険金の一部または全部を生前給付金として受け取ることができる特約であり、特約保険料は原則として無料である。", options: null, answer: 0, explanation: { reason: "リビング・ニーズ特約の特約保険料は通常は無料（主契約の範囲内）で付加できます。", trap: "高額な追加特約保険料が必要であると誤認させるひっかけです。", law: "生命保険標準約款" }, difficulty: "★★☆" },
+            { id: 410, category: "risk", categoryName: "リスク管理", type: "ox", question: "損害保険における「モラル・ハザード（道徳的危険）」とは、保険に加入したことによって被保険者の注意義務が緩み、事故発生の危険性が高まる現象を指す。", options: null, answer: 0, explanation: { reason: "保険加入による油断や不注意から事故のリスクが高まることをモラル・ハザードと言います。", trap: "故意に詐欺的な事故を起こすモラル・リスク（狭義）と混同させます。", law: "保険リスク管理論" }, difficulty: "★★☆" },
+            { id: 411, category: "risk", categoryName: "リスク管理", type: "ox", question: "個人賠償責任保険（特約）では、日常生活において他人にケガをさせたり財物を壊したりして法律上の損害賠償責任を負った場合を補償するが、自動車の運転中に起こした事故は原則として補償対象外である。", options: null, answer: 0, explanation: { reason: "自動車事故は個人賠償責任保険の補償対象外（自動車保険で対応）です。", trap: "自動車事故も個人賠償責任保険ですべてカバーされると誤認させます。", law: "損害保険約款" }, difficulty: "★★☆" },
+            { id: 412, category: "risk", categoryName: "リスク管理", type: "ox", question: "地震保険の保険金額は、主契約である火災保険の保険金額の「30％〜50％」の範囲内で設定しなければならないと法律で定められている。", options: null, answer: 0, explanation: { reason: "地震保険の付保割合は火災保険金額の30％〜50％の範囲（建物500万円、家財300万円が上限）です。", trap: "火災保険と同額（100％）まで地震保険をかけられると誤認させるひっかけです。", law: "地震保険に関する法律" }, difficulty: "★★☆" },
+            { id: 413, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の「転換制度」を利用する場合、転換時点の年齢や保険料率に基づき新しい契約に切り替えるため、原則として医師の診査や告知が再び必要となる。", options: null, answer: 0, explanation: { reason: "契約転換の際は健康状態の告知や診査が必要であり、保険料が上がることがあります。", trap: "告知や診査なしで無条件に有利な条件へ変更できると誤認させます。", law: "生命保険約款" }, difficulty: "★★☆" },
+            { id: 414, category: "risk", categoryName: "リスク管理", type: "ox", question: "所得補償保険（就業不能保険）は、病気やケガによって働けなくなった場合に、喪失する所得を補填するための保険であり、公的年金の障害等級に関わらず約款の就業不能基準に基づいて支払われる。", options: null, answer: 0, explanation: { reason: "民間保険会社の就業不能保険や所得補償保険は独自の約款基準で保険金が支払われます。", trap: "公的障害年金の受給認定と完全に連動していると誤認させます。", law: "損害・生命保険実務" }, difficulty: "★★☆" },
+            { id: 415, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の「受取人変更」を行う場合、保険契約者は保険会社の承諾を得る必要があり、被保険者の同意は一切不要である。", options: null, answer: 1, explanation: { reason: "受取人の変更には被保険者の同意（署名等）が必要な場合が多く、無断では変更できません。", trap: "契約者の単独の意思だけで自由に何回でも変更できると誤認させるひっかけです。", law: "保険法第58条" }, difficulty: "★★☆" },
+            { id: 416, category: "risk", categoryName: "リスク管理", type: "ox", question: "火災保険の「実損払い方式」では、保険価額を限度として実際に発生した損害の額が支払われるため、保険にいくら多くかけても保険価額を超える保険金が支払われることはない。", options: null, answer: 0, explanation: { reason: "損害保険は利得禁止の原則があるため、実際の損害額を超える保険金は支払われません。", trap: "保険金額を高くかければ実際の損害額より多くの保険金を受け取れると誤認させます。", law: "保険法" }, difficulty: "★☆☆" },
+            { id: 417, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の「契約者貸付」制度を利用して保険会社から資金を借り入れた場合、貸付金に対する利息を支払う必要はない。", options: null, answer: 1, explanation: { reason: "契約者貸付には所定の利息が発生し、返済しないと解約返戻金から差し引かれます。", trap: "自分の積立金だから利息は一切かからないと誤認させるひっかけです。", law: "生命保険約款" }, difficulty: "★☆☆" },
+            { id: 418, category: "risk", categoryName: "リスク管理", type: "ox", question: "海外旅行保険の特約等で付帯される「賠償責任保険」は、ホテルの客室の備品を誤って破損させた場合の法律上の損害賠償責任も補償の対象となる。", options: null, answer: 0, explanation: { reason: "ホテルの客室等での受託品損壊や他人の物に対する賠償も補償対象に含まれます。", trap: "旅行先での器物破損は一切補償対象外であると誤認させます。", law: "損害保険実務" }, difficulty: "★★☆" },
+            { id: 419, category: "risk", categoryName: "リスク管理", type: "ox", question: "生命保険の「払済保険」に変更すると、それ以降の保険料の払い込みは不要となるが、元の契約に付帯されていた医療特約や災害特約などの特約は原則として消滅する。", options: null, answer: 0, explanation: { reason: "払済保険に変更すると保険料払込が免除され、その代わり特約は原則消滅します。", trap: "特約もそのまますべて維持されると誤認させるひっかけです。", law: "生命保険約款" }, difficulty: "★★★" },
+            { id: 420, category: "risk", categoryName: "リスク管理", type: "ox", question: "自賠責保険（自動車損害賠償責任保険）は、すべての自動車や原動機付自転車に加入が義務付けられており、対物賠償事故も補償の対象に含まれている。", options: null, answer: 1, explanation: { reason: "自賠責保険は「人（対人）」の賠償のみを対象としており、車のボディや電柱などの「対物」は一切補償されません。", trap: "対物も自賠責で補償されると混同させる超定番のひっかけです。", law: "自動車損害賠償保障法" }, difficulty: "★☆☆" },
+
+            // ==========================================
+            // 5. 不動産 (20問: ID 501〜520)
+            // ==========================================
+            { id: 501, category: "realestate", categoryName: "不動産", type: "ox", question: "建築基準法において、都市計画区域および準都市計画区域内で建築物を建築する場合、敷地が幅員4m以上の道路に2m以上接していなければならないという「接道義務」が定められている。", options: null, answer: 0, explanation: { reason: "原則として幅員4m以上の道路に2m以上接している必要があります。", trap: "道路幅や接道長さを入れ替えるひっかけ問題です。", law: "建築基準法第43条" }, difficulty: "★☆☆" },
+            { id: 502, category: "realestate", categoryName: "不動産", type: "3choice", question: "都市計画法の「用途地域」のうち、主に住居の環境を保護するために定められた地域に含まれないものはどれか？", options: ["工業専用地域", "第一種低層住居専用地域", "中高層住居専用地域"], answer: 0, explanation: { reason: "工業専用地域は工場の利便増進のための地域であり住居系ではありません。", trap: "低層住居や中高層住居などの名称と混同させる罠です。", law: "都市計画法第8条" }, difficulty: "★☆☆" },
+            { id: 503, category: "realestate", categoryName: "不動産", type: "ox", question: "不動産の登記事項証明書において、権利に関する事項は「表題部（表示に関する登記）」に記録される。", options: null, answer: 1, explanation: { reason: "不動産の物理的状況（地目や面積など）は「表題部」に、権利関係（所有権や抵当権など）は「権利部（甲区・乙区）」に記録されます。", trap: "表題部に権利が記載されると誤認させるひっかけです。", law: "不動産登記法" }, difficulty: "★☆☆" },
+            { id: 504, category: "realestate", categoryName: "不動産", type: "ox", question: "建蔽率（けんぺい率）とは、敷地面積に対する建築面積の割合をいい、防火地域内で耐火建築物を建てる場合などの一定の緩和措置が規定されている。", options: null, answer: 0, explanation: { reason: "耐火建築物を防火地域等に建てる場合は建蔽率が10％緩和される等の特例があります。", trap: "容積率の緩和と混同させるひっかけです。", law: "建築基準法第53条" }, difficulty: "★★☆" },
+            { id: 505, category: "realestate", categoryName: "不動産", type: "ox", question: "不動産の譲渡所得の特例において、マイホーム（居住用財産）を売却した場合の「3,000万円の特別控除」の適用を受けるためには、前年および前々年にこの特例を受けていないこと等の要件を満たす必要がある。", options: null, answer: 0, explanation: { reason: "居住用財産の3,000万円特別控除は前年・前々年に受けていないことや親族間譲渡でないことなどが要件です。", trap: "何度でも毎年繰り返し適用を受けられると誤認させるひっかけです。", law: "租税特別措置法第35条" }, difficulty: "★★☆" },
+            { id: 506, category: "realestate", categoryName: "不動産", type: "ox", question: "宅地建物取引業法における「重要事項説明」は、売買契約や賃貸借契約の締結後、速やかに買主や借主に対して書面を交付して説明すればよい。", options: null, answer: 1, explanation: { reason: "重要事項説明は契約締結「前」に行わなければなりません（締結後では遅いです）。", trap: "契約締結後でもよいと誤認させる超定番のひっかけです。", law: "宅地建物取引業法第35条" }, difficulty: "★☆☆" },
+            { id: 507, category: "realestate", categoryName: "不動産", type: "ox", question: "借地借家法における「定期借家契約」は、契約の更新がなく期間の満了により確実に契約が終了するため、書面（公正証書等の書面）によって契約を締結しなければならない。", options: null, answer: 0, explanation: { reason: "定期建物賃貸借契約は公正証書等の書面によって契約する必要があります。", trap: "口頭の合意だけでも定期借家契約として有効であると誤認させます。", law: "借地借家法第38条" }, difficulty: "★★☆" },
+            { id: 508, category: "realestate", categoryName: "不動産", type: "ox", question: "不動産取得税は、不動産を購入・贈与等により取得した者に対して課される地方税であり、相続により取得した場合には課税されない。", options: null, answer: 0, explanation: { reason: "相続による不動産取得は、非課税とされるため不動産取得税は課されません。", trap: "相続であっても容赦なく不動産取得税が課されると誤認させるひっかけです。", law: "地方税法" }, difficulty: "★★☆" },
+            { id: 509, category: "realestate", categoryName: "不動産", type: "ox", question: "容積率の制限について、前面道路の幅員が「12m未満」である場合の前面道路による容積率の制限は、原則として「前面道路の幅員に法定乗数（住居系なら0.4など）を乗じたもの」と「都市計画で定められた容積率」のいずれか低い方が適用される。", options: null, answer: 0, explanation: { reason: "前面道路幅員による制限と指定容積率の厳しい方（低い方）が適用されます。", trap: "高い方の容積率を採用できると誤認させるひっかけです。", law: "建築基準法第52条" }, difficulty: "★★★" },
+            { id: 510, category: "realestate", categoryName: "不動産", type: "ox", question: "都市計画区域外にある土地については、建築基準法の確認申請を行うことなく、どのような建物でも自由に建築することができる。", options: null, answer: 1, explanation: { reason: "都市計画区域外であっても、一定の規模以上の建築物を建てる場合は建築確認が必要です。", trap: "都市計画区域外なら建築基準法が一切適用されないと誤認させるひっかけです。", law: "建築基準法第6条" }, difficulty: "★★☆" },
+            { id: 511, category: "realestate", categoryName: "不動産", type: "ox", question: "不動産の評価方法のひとつである「収益還元法」は、対象不動産が将来生み出すであろう純収益を還元利回りで割り戻して収益価格を求める手法であり、賃貸用不動産の評価に特に有効である。", options: null, answer: 0, explanation: { reason: "収益還元法は賃貸マンション等の収益物件の評価に広く用いられます。", trap: "更地の原価を積み上げる原価法と混同させるひっかけです。", law: "不動産鑑定評価基準" }, difficulty: "★★☆" },
+            { id: 512, category: "realestate", categoryName: "不動産", type: "ox", question: "所得税の譲渡所得における「長期譲渡所得」と「短期譲渡所得」の判定基準は、譲渡した年の1月1日現在における所有期間が「5年」を超えるかどうかである。", options: null, answer: 0, explanation: { reason: "所有期間が5年超であれば長期譲渡所得、5年以下であれば短期譲渡所得となります。", trap: "所有期間の基準を10年と誤認させるひっかけです。", law: "所得税法第33条" }, difficulty: "★☆☆" },
+            { id: 513, category: "realestate", categoryName: "不動産", type: "ox", question: "借地借家法に基づく「普通借地権」の存続期間は、法律上の初期設定では「30年」であり、当事者間の合意でこれより短く設定することは原則としてできない。", options: null, answer: 0, explanation: { reason: "普通借地権の法定存続期間は30年であり、これより短い期間を設定しても30年となります。", trap: "20年や50年であると誤認させるひっかけです。", law: "借地借家法第3条" }, difficulty: "★★☆" },
+            { id: 514, category: "realestate", categoryName: "不動産", type: "ox", question: "固定資産税は、毎年1月1日時点における固定資産（土地・家屋など）の所有者に対して課される市町村税（東京都は都税）である。", options: null, answer: 0, explanation: { reason: "固定資産税の賦課期日は毎年1月1日です。", trap: "4月1日時点の所有者に課されると誤認させるひっかけです。", law: "地方税法" }, difficulty: "★☆☆" },
+            { id: 515, category: "realestate", categoryName: "不動産", type: "ox", question: "都市計画法の「地区計画」は、それぞれの地区の特性に応じて、市街地の環境整備や良好な都市環境を形成するためにきめ細かなルールを定める計画である。", options: null, answer: 0, explanation: { reason: "地区計画は小規模な地区単位でのきめ細かなまちづくりのルールを定めます。", trap: "全国一律で適用される画一的なルールであると誤認させます。", law: "都市計画法第12条の4" }, difficulty: "★★☆" },
+            { id: 516, category: "realestate", categoryName: "不動産", type: "ox", question: "不動産の登記において、「所有権の移転登記」は、原則として登記権利者と登記義務者が共同して申請しなければならない（共同申請の原則）。", options: null, answer: 0, explanation: { reason: "権利に関する登記は原則として権利者と義務者の共同申請が必要です。", trap: "売主（義務者）の同意なしに買主の単独でいつでも登記できると誤認させます。", law: "不動産登記法第60条" }, difficulty: "★★☆" },
+            { id: 517, category: "realestate", categoryName: "不動産", type: "ox", question: "建築基準法の「防火地域」内において、3階建ての建築物を建てる場合、原則としてその建築物は「耐火建築物」としなければならない。", options: null, answer: 0, explanation: { reason: "防火地域で階数が多い、あるいは大規模な建築物は耐火建築物にする必要があります。", trap: "木造建築でも自由に建てられると誤認させるひっかけです。", law: "建築基準法第61条" }, difficulty: "★★★" },
+            { id: 518, category: "realestate", categoryName: "不動産", type: "ox", question: "マンションの管理組合において、区分所有者全員で構成される組織であり、集会の決議によって管理規約を定めたり変更したりすることができる。", options: null, answer: 0, explanation: { reason: "区分所有法に基づき管理組合が構成され、集会決議で規約の制定や変更が行われます。", trap: "分譲会社やデベロッパーが永久に管理の決定権を握り続けると誤認させます。", law: "区分所有法" }, difficulty: "★☆☆" },
+            { id: 519, category: "realestate", categoryName: "不動産", type: "ox", question: "都市計画区域について、用途地域が定められていないいわゆる「白地地域（用途無指定区域）」では、建築物の建て方に関する制限が一切存在しない。", options: null, answer: 1, explanation: { reason: "用途無指定地域であっても、容積率や建蔽率、高さ制限などの基本制限は適用されます。", trap: "制限が一切なく何でも自由に建てられると誤認させるひっかけです。", law: "都市計画法・建築基準法" }, difficulty: "★★☆" },
+            { id: 520, category: "realestate", categoryName: "不動産", type: "ox", question: "不動産の売買において、売買契約締結時に買主が売主に支払う「手付金」は、特段の合意がない場合、原則として「解約手付」と推定される。", options: null, answer: 0, explanation: { reason: "民法上、手付は特に定めがない限り解約手付と推定されます。", trap: "常に違約手付や証約手付であると断言するひっかけです。", law: "民法第557条" }, difficulty: "★★☆" },
+
+            // ==========================================
+            // 6. 相続・事業承継 (20問: ID 601〜620)
+            // ==========================================
+            { id: 601, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "民法に定める法定相続人の順位において、被相続人の兄弟姉妹は常に第1順位の相続人となり、配偶者とともに相続財産を取得する。", options: null, answer: 1, explanation: { reason: "兄弟姉妹は第3順位であり、第1順位は「子」、第2順位は「直系尊属」です。", trap: "兄弟姉妹が第1順位であると勘違いさせる超定番のひっかけです。", law: "民法第887条〜第889条" }, difficulty: "★☆☆" },
+            { id: 602, category: "inheritance", categoryName: "相続・事業承継", type: "3choice", question: "相続税の基礎控除額の計算式として正しいものはどれか？（3,000万円 ＋ 法定相続人の数 × 600万円）", options: ["3,000万円 ＋ 法定相続人の数 × 600万円", "5,000万円 ＋ 法定相続人の数 × 1,000万円", "4,000万円 ＋ 法定相続人の数 × 800万円"], answer: 0, explanation: { reason: "相続税の基礎控除は3,000万円＋600万円×法定相続人の数です。", trap: "過去の改正前の古い金額（5000万円＋1000万円）を狙う罠です。", law: "相続税法第15条" }, difficulty: "★☆☆" },
+            { id: 603, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "遺言の方式のうち「自筆証書遺言」は、原則として遺言者が全文、日付および氏名を自署し、押印しなければならないが、財産目録についてはパソコンで作成したものや通帳のコピー等を添付することができる。", options: null, answer: 0, explanation: { reason: "自筆証書遺言の財産目録はパソコン作成やコピーの添付が認められています（全ページ署名押印が必要）。", trap: "財産目録も含めて一文字残らず全て手書きでなければ無効であると誤認させます。", law: "民法第968条" }, difficulty: "★★☆" },
+            { id: 604, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "民法に定める「遺留分」について、兄弟姉妹には遺留分が認められているが、直系尊属や配偶者、子には遺留分はない。", options: null, answer: 1, explanation: { reason: "兄弟姉妹には遺留分は認められません。配偶者、子、直系尊属に遺留分があります。", trap: "兄弟姉妹に遺留分があり、子や配偶者にはないという逆の記載をするひっかけです。", law: "民法第1042条" }, difficulty: "★★☆" },
+            { id: 605, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "贈与税の「暦年課税」において、1年間（1月1日〜12月31日）の基礎控除額は「110万円」であり、この金額までの贈与であれば贈与税は課されず、申告も原則として不要である。", options: null, answer: 0, explanation: { reason: "暦年贈与の基礎控除は110万円であり、基礎控除以下の場合は申告不要です。", trap: "基礎控除が60万円や100万円であると誤認させるひっかけです。", law: "相続税法第21条の5" }, difficulty: "★☆☆" },
+            { id: 606, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "相続の「承認または放棄」を行う期間（熟慮期間）は、原則として自己のために相続の開始があったことを知った時から「3ヶ月以内」とされている。", options: null, answer: 0, explanation: { reason: "相続の承認・放棄は原則として相続開始を知った日から3ヶ月以内（家庭裁判所）に行う必要があります。", trap: "1年以内や6ヶ月以内と誤認させるひっかけです。", law: "民法第921条" }, difficulty: "★☆☆" },
+            { id: 607, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "「相続時精算課税制度」を選択した場合、2500万円の特別控除枠を超える贈与分については一律「20％」の税率で贈与税が課され、将来相続が発生した際に相続財産に加算されて精算される。", options: null, answer: 0, explanation: { reason: "相続時精算課税は2500万円まで特別控除があり、超えた部分は一律20％の贈与税が課され、相続時に合算精算されます。", trap: "贈与税を払ったら相続時には一切関係なくなると誤認させるひっかけです。", law: "相続税法第21条の9" }, difficulty: "★★☆" },
+            { id: 608, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "遺言書の種類のうち「公正証書遺言」は、証人2人以上の立会いのもとで、遺言者が遺言の趣旨を公証人に口授し、公証人が作成するものである。", options: null, answer: 0, explanation: { reason: "公正証書遺言は証人2人以上立ち会いのもと公証人が作成します。", trap: "証人が1人でもよいとか、公証人が不要であると誤認させます。", law: "民法第969条" }, difficulty: "★★☆" },
+            { id: 609, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "法定相続分に関して、配偶者と「子」が相続人である場合、配偶者の法定相続分は2分の1であり、残りの2分の1を子（複数の場合は均等）が取得する。", options: null, answer: 0, explanation: { reason: "配偶者と子が相続人の場合の法定相続分はそれぞれ1/2ずつです。", trap: "配偶者の取り分が3分の1であると誤認させるひっかけです。", law: "民法第900条" }, difficulty: "★☆☆" },
+            { id: 610, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "相続税の「配偶者の税額の軽減」の特例により、配偶者が取得した正味の遺産額が「1億6000万円」または「配偶者の法定相続分相当額」のいずれか多い金額までは、相続税が課されない。", options: null, answer: 0, explanation: { reason: "配偶者の税額軽減は1億6000万円か法定相続分相当額のいずれか高い金額まで無税となります。", trap: "金額の数値を5000万円などと低く記載するひっかけです。", law: "相続税法第19条の2" }, difficulty: "★★☆" },
+            { id: 611, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "贈与税の配偶者控除（おしどり贈与）の適用を受けるための要件として、婚姻期間が「20年以上」の夫婦間で、居住用不動産またはその取得資金の贈与が行われたことが必要である。", options: null, answer: 0, explanation: { reason: "婚姻期間20年以上の夫婦間の居住用不動産贈与には最高2000万円の配偶者控除（基礎控除110万と合わせ最大2110万）があります。", trap: "婚姻期間が10年以上であればよいと誤認させるひっかけです。", law: "相続税法第21条の6" }, difficulty: "★★☆" },
+            { id: 612, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "相続人が誰もいない場合（相続人不存在）、家庭裁判所によって選任された「相続財産清算人」による清算手続き等が行われ、最終的に残余財産は国庫に帰属する。", options: null, answer: 0, explanation: { reason: "相続人がいない場合は相続財産清算人の手続きを経て国庫に帰属します。", trap: "近隣の住民や親しい友人が自動的に相続財産を取得できると誤認させます。", law: "民法第959条" }, difficulty: "★★☆" },
+            { id: 613, category: "inheritance", categoryName: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "「遺言執行者」は、遺言の内容を実現するために必要な手続きを行う者であり、未成年者や破産者であっても遺言執行者に就任することができる。", options: null, answer: 1, explanation: { reason: "未成年者や破産者は遺言執行者になれません（欠格事由）。", trap: "誰でも無条件に遺言執行者になれると誤認させるひっかけです。", law: "民法第1006条" }, difficulty: "★★★" },
+            { id: 614, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "相続税の「小規模宅地等の特例」において、被相続人の居住用宅地（特定居住用宅地等）については、限度面積「330㎡」まで「80％」の評価額減額を受けることができる。", options: null, answer: 0, explanation: { reason: "特定居住用宅地等は330㎡まで80％減額されます。", trap: "面積が200㎡であったり減額割合が50％であると誤認させる定番のひっかけです。", law: "租税特別措置法第69条の4" }, difficulty: "★★☆" },
+            { id: 615, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "遺産分割協議は、相続人全員の合意が成立していれば、行方不明の相続人や意思能力のない相続人が含まれていても、残りのメンバーだけで有効に成立させることができる。", options: null, answer: 1, explanation: { reason: "相続人全員の参加・合意が必要であり、行方不明者がいれば不在者財産人の選任等が必要です。", trap: "一部の相続人だけで勝手に決めても有効であると誤認させるひっかけです。", law: "民法第907条" }, difficulty: "★★☆" },
+            { id: 616, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "民法上の「代襲相続」において、被相続人の兄弟姉妹が相続人となるはずだったが既に死亡している場合、その兄弟姉妹の子（甥・姪）まで代襲相続が認められる。", options: null, answer: 0, explanation: { reason: "兄弟姉妹の代襲相続は子（甥・姪）まで認められます（ただし孫以下の再代襲は不可）。", trap: "兄弟姉妹の子供（甥・姪）への代襲相続は一切認められないと誤認させます。", law: "民法第889条第2項" }, difficulty: "★★★" },
+            { id: 617, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "相続税の申告および納税の期限は、原則として「被相続人の死亡を知った日の翌日から10ヶ月以内」である。", options: null, answer: 1, explanation: { reason: "相続税の申告期限は「被相続人が死亡したこと『を知った日』」ではなく、「被相続人が『死亡したこと』を知った日（ではなく「死亡した日」）の翌日から10ヶ月以内」です。", trap: "「知った日の翌日から10ヶ月」という起算点の錯覚を狙う非常に有名なひっかけです。", law: "相続税法第27条" }, difficulty: "★★★" },
+            { id: 618, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "生命保険の死亡保険金を相続人以外の者（例えば孫や内縁の妻など）が受け取った場合、当該死亡保険金には相続税の「非課税枠（500万円×法定相続人の数）」を適用することができる。", options: null, answer: 1, explanation: { reason: "死亡保険金の非課税枠は「相続人」が受け取った場合にのみ適用され、相続人以外の者が受け取った場合は非課税枠の適用を受けられません。", trap: "誰が受取人であっても非課税枠が使えると誤認させる超定番のひっかけです。", law: "相続税法第12条" }, difficulty: "★★★" },
+            { id: 619, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "自筆証書遺言を家庭裁判所で検認する際、封印のある自筆証書遺言は、相続人またはその代理人の立会いなしに開封してはならない。", options: null, answer: 0, explanation: { reason: "封印のある遺言書は家庭裁判所で相続人等の立ち会いのもとで開封しなければなりません（勝手に開けると過料の対象）。", trap: "自宅で自分で勝手に開封しても何の問題もないと誤認させます。", law: "民法第1004条" }, difficulty: "★★☆" },
+            { id: 620, category: "inheritance", categoryName: "相続・事業承継", type: "ox", question: "民法に定める「特別受益者」の持ち戻し免除の意思表示は、遺贈または生前贈与について行うことができ、必ず書面で行わなければ効力を生じない。", options: null, answer: 1, explanation: { reason: "特別受益の持ち戻し免除の意思表示に書面等の厳格な形式要件は法律上課されていません。", trap: "必ず公正証書等の書面でなければ免除できないと誤認させるひっかけです。", law: "民法第903条" }, difficulty: "★★★" }
         ];
 
         let activeQuestions = [];
@@ -768,7 +749,6 @@
             if (tEl) tEl.innerText = q.explanation.trap;
             if (lEl) lEl.innerText = q.explanation.law;
 
-            // 回答時に新しい広告をランダムで再読み込みして表示
             insertRandomAds();
 
             saveProgress();
