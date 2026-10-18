@@ -299,7 +299,10 @@
         <p>&copy; 2026 FP3級勉強サイト - 全6分野完全対応.</p>
     </footer>
 
-    <!-- スクリプト類 -->
+    <!-- ★ここで questions.js を確実に読み込みます -->
+    <script src="questions.js"></script>
+
+    <!-- メインアプリケーションロジック -->
     <script>
         const adsList = [
             `【PR】FP3級 一発合格テキスト・問題集の決定版はこちら ＞`,
@@ -313,11 +316,6 @@
             return adsList[randomIndex];
         }
 
-        // questions.js相当の全6分野問題データ
-        const fpQuestions = [
-            // (ここに問題データ配列が格納されます)
-        ];
-
         let activeQuestions = [];
         let currentIndex = 0;
         let scoreCount = 0;
@@ -328,6 +326,8 @@
             if (typeof fpQuestions !== 'undefined') {
                 const totalEl = document.getElementById('header-total-pool');
                 if (totalEl) totalEl.innerText = `${fpQuestions.length}問`;
+            } else {
+                console.error("fpQuestions が定義されていません。questions.js の読み込みを確認してください。");
             }
 
             loadReviewList();
@@ -400,7 +400,7 @@
 
         function startQuiz(mode = 'all') {
             if (typeof fpQuestions === 'undefined' || fpQuestions.length === 0) {
-                alert('問題データが正しく読み込まれていません。');
+                alert('問題データ（questions.js）が正しく読み込まれていません。');
                 return;
             }
 
@@ -534,7 +534,7 @@
             if (currentIndex + 1 < activeQuestions.length) {
                 currentIndex++;
                 renderQuestion();
-                window.scrollTo({ top: 0, behavior: 'smooth'</i> });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
                 saveProgress();
             } else {
                 localStorage.removeItem('fp3_study_active');
